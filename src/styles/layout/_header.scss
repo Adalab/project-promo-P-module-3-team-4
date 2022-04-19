@@ -1,0 +1,23 @@
+.header {
+  min-width: 320px;
+  width: 100%;
+  height: 6.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    align-items: flex-start;
+  }
+
+  &__link {
+    width: 200px;
+    height: 50px;
+    background: url("../images/logo-awesome-profile-cards.svg") center center
+      no-repeat;
+    background-size: contain;
+    @include tablet {
+      margin-left: 2.5rem;
+    }
+  }
+}

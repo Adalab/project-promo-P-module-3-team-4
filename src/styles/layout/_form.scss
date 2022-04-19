@@ -1,0 +1,15 @@
+.form {
+  background-image: linear-gradient(to bottom, $contentlight, $contentwhite 9%);
+  @include tablet {
+    width: 472px;
+  }
+}
+
+.collapsible {
+  font-size: 1.125rem;
+  color: $contentdark;
+}
+.icon {
+  font-size: 1.125rem;
+  color: $brandlight;
+}

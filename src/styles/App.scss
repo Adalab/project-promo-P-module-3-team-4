@@ -1,0 +1,18 @@
+@import '../styles/core/reset';
+@import '../styles/core/variables';
+@import '../styles/core/mediaqueries';
+@import '../styles/core/jsclasses';
+
+@import '../styles/layout/create';
+@import '../styles/layout/design';
+@import '../styles/layout/fill';
+@import '../styles/layout/footer';
+@import '../styles/layout/form';
+@import '../styles/layout/header';
+@import '../styles/layout/index';
+@import '../styles/layout/preview';
+@import '../styles/layout/share';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

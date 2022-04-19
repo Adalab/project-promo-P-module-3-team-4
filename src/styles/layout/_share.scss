@@ -1,0 +1,114 @@
+.share {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px 22px 20px;
+
+    &__icon {
+      font-size: 18px;
+      color: $brandlight;
+      text-align: center;
+      padding-right: 12px;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      color: $contentdark;
+      margin-right: 8.5em;
+    }
+    &__angle {
+      color: $contentdark;
+    }
+  }
+  .button-container {
+    &__create {
+      width: 199px;
+      height: 50px;
+      background-color: $brandlight;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+      border: none;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 60px;
+      margin-left: 60px;
+      margin-bottom: 30px;
+
+      &__icon {
+        color: $contentwhite;
+        font-size: 22px;
+        margin-right: 9px;
+      }
+
+      &__title {
+        text-transform: uppercase;
+        color: $contentwhite;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.disapear {
+  display: none;
+}
+.done {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid $contentmedium;
+
+  &__title {
+    color: $contentdark;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $brandlight;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  &__button-twitter {
+    width: 181px;
+    height: 30px;
+    background-color: #00a0f5;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    &__icon {
+      color: $contentwhite;
+      font-size: 14px;
+      margin-right: 9.5px;
+    }
+
+    &__content {
+      color: $contentwhite;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}

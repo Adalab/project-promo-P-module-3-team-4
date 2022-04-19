@@ -1,0 +1,92 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  min-width: 320px;
+  flex-grow: 1;
+  background-color: $contentlight;
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.landing {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__logo {
+    width: 250px;
+    @include tablet {
+      height: 105px;
+    }
+  }
+  &__title {
+    padding-top: 2.2125rem;
+    color: $brandlight;
+    font-family: $secondaryfont;
+    font-size: 1.2rem;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+  &__text {
+    color: $branddark;
+    font-size: 0.8rem;
+    padding-bottom: 1.1125rem;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    @include tablet {
+      padding-bottom: 1.6875rem;
+      font-size: 1rem;
+      width: 25em;
+    }
+  }
+  &__function {
+    display: flex;
+    font-size: 0.8rem;
+    color: $contentdark;
+    border: solid 0.15rem rgba(227, 130, 75, 0.21);
+    border-radius: 0.25rem;
+    margin-right: 25px;
+    margin-left: 25px;
+    justify-content: space-around;
+    @include tablet {
+      width: 20.3125rem;
+      height: 5.375rem;
+    }
+    &--li {
+      display: flex;
+      flex-direction: column;
+      padding: 0.9375rem;
+    }
+  }
+}
+.button {
+  grid-row: 3;
+  margin-top: 2.4375rem;
+  margin-bottom: 1.875rem;
+  height: 2.625rem;
+  width: 8.0625rem;
+  background-color: #438792;
+  border-radius: 1.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.fa-xl {
+  color: $brandlight;
+  height: 25px;
+  width: auto;
+  transform: translateY(15px);
+}
