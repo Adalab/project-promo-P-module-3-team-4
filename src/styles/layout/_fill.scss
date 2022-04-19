@@ -4,16 +4,12 @@
   border-bottom: 1px solid $contentmedium;
   cursor: pointer;
 
-
-
-
   &__legend {
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 27px 20px 25px 20px;
-    
   }
 
   &__title-filled {
@@ -43,7 +39,7 @@
   cursor: pointer;
 }
 .hidden-input {
-  display:none;
+  display: none;
   cursor: pointer;
 }
 
@@ -68,7 +64,7 @@
   height: 30px;
   border: solid 1px $brandmedium;
   margin-top: 7px;
- background-image: url("../images/profile.jpg");
+  background-image: url('../../images/profile.jpg');
   background-size: cover;
   background-position: center;
   overflow-y: hidden;
