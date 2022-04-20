@@ -87,7 +87,7 @@ function App() {
                 <i className="fa-solid fa-angle-up collapsible js-design__triangle"></i>
               </div>
 
-              <div className="hidden js-design__wrapper">
+              <div className="js-design__wrapper">
                 <label for="palette" className="palette">
                   Colores
                 </label>
@@ -151,7 +151,7 @@ function App() {
                 <p className="filled__title-filled">rellena</p>
                 <i className="fa-solid fa-angle-up collapsible js-fill__triangle"></i>
               </div>
-              <section className="filled-section hidden js-fill__wrapper">
+              <section className="filled-section  js-fill__wrapper">
                 <label className="firstname filled-text" for="name">
                   Nombre completo
                 </label>
@@ -252,7 +252,7 @@ function App() {
                   <p className="share__container__title">comparte</p>
                   <i className="fa-solid fa-angle-up share__container__angle js-share__triangle"></i>
                 </div>
-                <div className="button-container hidden js-share__wrapper">
+                <div className="button-container js-share__wrapper">
                   <button className="button-container__create js-buttonShare">
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
