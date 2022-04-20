@@ -15,58 +15,54 @@ function App() {
 
         <div className="createwrapper">
           <article className="preview">
-            <button className="reset js-resetButton" type="reset" title="Reset">
+            <button className="reset " type="reset" title="Reset">
               <i className="fa-solid fa-trash-can reset__can"></i>Reset
             </button>
 
-            <div className="card js_cardContainer">
-              <div className="card__rectangle js_cardRectangle"></div>
+            <div className="card ">
+              <div className="card__rectangle "></div>
 
-              <h2 className="card__names js_namesCard js_resetNamesCard">
+              <h2 className="card__names ">
                 nombre apellido
               </h2>
-              <h3 className="card__profession js_professionCard js_resetJobCard">
+              <h3 className="card__profession ">
                 profesión
               </h3>
 
-              <div className="card__container-img js__profile-image"></div>
+              <div className="card__container-img "></div>
               <nav className="card__icons">
-                <div className="card__icons__container-mobile js_containerMobile">
+                <div className="card__icons__container-mobile ">
                   <a
-                    className="js_iconMobile js_resetPhone"
                     title="llamar por teléfono"
-                    href=""
-                    target="_blank"
+                    href="1#"
+                    target="blank"
                   >
                     <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile"></i>
                   </a>
                 </div>
 
-                <div className="card__icons__container-mail js_containerMail">
+                <div className="card__icons__container-mail">
                   <a
-                    className="js_iconMail js_resetMail"
                     title="enviar email"
                     href="mailto:hola@adalab.es"
-                    target="_blank"
+                    target="blank"
                   >
                     <i className="fa-solid fa-envelope card__icons__container-mail__mail"></i>
                   </a>
                 </div>
-                <div className="card__icons__container-linkedin js_containerLinkedIn">
+                <div className="card__icons__container-linkedin">
                   <a
-                    className="js_iconLinkedIn js_resetLinkedin"
                     href="https://www.linkedin.com/school/adalab/?originalSubdomain=es"
-                    target="_blank"
+                    target="blank"
                     title="ir a perfil de Linkedin"
                   >
                     <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin"></i>
                   </a>
                 </div>
-                <div className="card__icons__container-git js_containerGit">
+                <div className="card__icons__container-git">
                   <a
-                    className="js_iconGit js_resetGithub"
                     href="https://github.com/Adalab/"
-                    target="_blank"
+                    target="blank"
                     title="ir a perfil de Github"
                   >
                     <i className="fa-brands fa-github-alt card__icons__container-git__github"></i>
@@ -76,24 +72,23 @@ function App() {
             </div>
           </article>
 
-          <form className="form js-form" action="/signup" method="post">
+          <form className="form" action="/signup" method="post">
             <fieldset className="design">
               <div
-                className="design__legend js-design_legend"
+                className="design__legend"
                 title="pincha aqui"
               >
                 <i className="fa-regular fa-object-ungroup icon"></i>
                 <p className="design__titledesign">Diseña</p>
-                <i className="fa-solid fa-angle-up collapsible js-design__triangle"></i>
+                <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
 
-              <div className="js-design__wrapper">
+              <div>
                 <label for="palette" className="palette">
                   Colores
                 </label>
-                <div className="colors js_colorBlue">
+                <div className="colors">
                   <input
-                    className="js_button_paletteBlue js_radio1"
                     id="palette"
                     type="radio"
                     name="palette"
@@ -104,9 +99,8 @@ function App() {
                   <div className="blue1__blue3"></div>
                 </div>
 
-                <div className="colors js_colorRed">
+                <div className="colors">
                   <input
-                    className="js_button_paletteRed"
                     id="palette"
                     type="radio"
                     name="palette"
@@ -116,9 +110,8 @@ function App() {
                   <div className="red1__red3"></div>
                 </div>
 
-                <div className="colors js_colorsMix">
+                <div className="colors">
                   <input
-                    className="js_button_paletteMix"
                     id="palette"
                     type="radio"
                     name="palette"
@@ -128,9 +121,8 @@ function App() {
                   <div className="mix1__mix3"></div>
                 </div>
 
-                <div className="colors js_colorsMixTeam">
+                <div className="colors">
                   <input
-                    className="js_button_paletteMixteam"
                     id="palette"
                     type="radio"
                     name="palette"
@@ -144,19 +136,19 @@ function App() {
 
             <fieldset className="filled">
               <div
-                className="filled__legend js-fill_legend"
+                className="filled__legend"
                 title="pincha aqui"
               >
                 <i className="fa-regular fa-keyboard icon"></i>
                 <p className="filled__title-filled">rellena</p>
-                <i className="fa-solid fa-angle-up collapsible js-fill__triangle"></i>
+                <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
-              <section className="filled-section  js-fill__wrapper">
+              <section className="filled-section">
                 <label className="firstname filled-text" for="name">
                   Nombre completo
                 </label>
                 <input
-                  className="box-text js-inputNames js_resetName"
+                  className="box-text"
                   id="name"
                   type="text"
                   name="name"
@@ -167,7 +159,7 @@ function App() {
                   Puesto
                 </label>
                 <input
-                  className="box-text js-inputProfession js_resetJob"
+                  className="box-text"
                   id="job"
                   type="text"
                   name="job"
@@ -181,7 +173,7 @@ function App() {
                 <div className="filled-button">
                   <label
                     for="image"
-                    className="input-orange box-text js__profile-trigger"
+                    className="input-orange box-text"
                   >
                     Añadir imagen
                   </label>
@@ -189,17 +181,17 @@ function App() {
                     type="file"
                     name
                     id="image"
-                    className="hidden-input js__profile-upload-btn"
+                    className="hidden-input"
                   />
 
-                  <span className="box-image js__profile-preview"></span>
+                  <span className="box-image"></span>
                 </div>
 
                 <label className="emailadress filled-text" for="email">
                   Email
                 </label>
                 <input
-                  className="box-text js_resetEmail"
+                  className="box-text"
                   id="email"
                   type="email"
                   name="email"
@@ -210,7 +202,7 @@ function App() {
                   Teléfono
                 </label>
                 <input
-                  className="box-text js_resetPhone"
+                  className="box-text"
                   id="phone"
                   type="tel"
                   name="phone"
@@ -221,7 +213,7 @@ function App() {
                   Linkedin
                 </label>
                 <input
-                  className="box-text js_resetLinkedin"
+                  className="box-text"
                   id="linkedin"
                   type="text"
                   name="linkedin"
@@ -232,7 +224,7 @@ function App() {
                   Github
                 </label>
                 <input
-                  className="box-tex js_resetGithub"
+                  className="box-tex"
                   id="github"
                   type="text"
                   name="name"
@@ -245,15 +237,15 @@ function App() {
             <fieldset className="wrapper-share">
               <div className="share">
                 <div
-                  className="share__container js-share_legend"
+                  className="share__container"
                   title="pincha aquí"
                 >
                   <i className="fa-solid fa-share-nodes share__container__icon"></i>
                   <p className="share__container__title">comparte</p>
-                  <i className="fa-solid fa-angle-up share__container__angle js-share__triangle"></i>
+                  <i className="fa-solid fa-angle-up share__container__angle"></i>
                 </div>
-                <div className="button-container js-share__wrapper">
-                  <button className="button-container__create js-buttonShare">
+                <div className="button-container">
+                  <button className="button-container__create">
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
                       className="button-container__create__title"
@@ -265,18 +257,18 @@ function App() {
                 </div>
               </div>
 
-              <div className="disapear js-shareLinkWrapper">
+              <div className="disapear">
                 <div className="done">
                   <p className="done__title">La tarjeta ha sido creada:</p>
                   <a
-                    className="done__link js-shareLink"
+                    className="done__link"
                     title="Ir al enlace de la tarjeta"
-                    href=""
+                    href="1#"
                   >
                     https://link tarjeta creada
                   </a>
                   <button
-                    className="done__button-twitter js-shareTwitter"
+                    className="done__button-twitter"
                     title="publicar la tarjeta en twitter"
                   ></button>
                 </div>
