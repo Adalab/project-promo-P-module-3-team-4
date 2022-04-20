@@ -4,9 +4,14 @@ import logo from '../images/logo-adalab.png';
 import team from '../images/logo-team.png';
 
 function App() {
+
+  const handleCreateBtn = (ev) => {
+    ev.preventDefault();
+    console.log(ev.target);
+  }
   return (
-    <div className="App">
-      <body className="createpage">
+    <>
+      <div className="createpage">
         <header className="header">
           <a className="header__link" href="../index.html" title="ir al inicio">
             {' '}
@@ -22,21 +27,13 @@ function App() {
             <div className="card ">
               <div className="card__rectangle "></div>
 
-              <h2 className="card__names ">
-                nombre apellido
-              </h2>
-              <h3 className="card__profession ">
-                profesión
-              </h3>
+              <h2 className="card__names ">nombre apellido</h2>
+              <h3 className="card__profession ">profesión</h3>
 
               <div className="card__container-img "></div>
               <nav className="card__icons">
                 <div className="card__icons__container-mobile ">
-                  <a
-                    title="llamar por teléfono"
-                    href="1#"
-                    target="blank"
-                  >
+                  <a title="llamar por teléfono" href="1#" target="blank">
                     <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile"></i>
                   </a>
                 </div>
@@ -74,10 +71,7 @@ function App() {
 
           <form className="form" action="/signup" method="post">
             <fieldset className="design">
-              <div
-                className="design__legend"
-                title="pincha aqui"
-              >
+              <div className="design__legend" title="pincha aqui">
                 <i className="fa-regular fa-object-ungroup icon"></i>
                 <p className="design__titledesign">Diseña</p>
                 <i className="fa-solid fa-angle-up collapsible"></i>
@@ -100,33 +94,21 @@ function App() {
                 </div>
 
                 <div className="colors">
-                  <input
-                    id="palette"
-                    type="radio"
-                    name="palette"
-                  />
+                  <input id="palette" type="radio" name="palette" />
                   <div className="red1"></div>
                   <div className="red1__red2"></div>
                   <div className="red1__red3"></div>
                 </div>
 
                 <div className="colors">
-                  <input
-                    id="palette"
-                    type="radio"
-                    name="palette"
-                  />
+                  <input id="palette" type="radio" name="palette" />
                   <div className="mix1"></div>
                   <div className="mix1__mix2"></div>
                   <div className="mix1__mix3"></div>
                 </div>
 
                 <div className="colors">
-                  <input
-                    id="palette"
-                    type="radio"
-                    name="palette"
-                  />
+                  <input id="palette" type="radio" name="palette" />
                   <div className="mixteam1"></div>
                   <div className="mixteam1__mixteam2"></div>
                   <div className="mixteam1__mixteam3"></div>
@@ -135,10 +117,7 @@ function App() {
             </fieldset>
 
             <fieldset className="filled">
-              <div
-                className="filled__legend"
-                title="pincha aqui"
-              >
+              <div className="filled__legend" title="pincha aqui">
                 <i className="fa-regular fa-keyboard icon"></i>
                 <p className="filled__title-filled">rellena</p>
                 <i className="fa-solid fa-angle-up collapsible"></i>
@@ -171,18 +150,10 @@ function App() {
                 </label>
 
                 <div className="filled-button">
-                  <label
-                    for="image"
-                    className="input-orange box-text"
-                  >
+                  <label for="image" className="input-orange box-text">
                     Añadir imagen
                   </label>
-                  <input
-                    type="file"
-                    name
-                    id="image"
-                    className="hidden-input"
-                  />
+                  <input type="file" name id="image" className="hidden-input" />
 
                   <span className="box-image"></span>
                 </div>
@@ -236,16 +207,13 @@ function App() {
 
             <fieldset className="wrapper-share">
               <div className="share">
-                <div
-                  className="share__container"
-                  title="pincha aquí"
-                >
+                <div className="share__container" title="pincha aquí">
                   <i className="fa-solid fa-share-nodes share__container__icon"></i>
                   <p className="share__container__title">comparte</p>
                   <i className="fa-solid fa-angle-up share__container__angle"></i>
                 </div>
                 <div className="button-container">
-                  <button className="button-container__create">
+                  <button className="button-container__create" onClick={handleCreateBtn}>
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
                       className="button-container__create__title"
@@ -286,8 +254,8 @@ function App() {
             </a>
           </div>
         </footer>
-      </body>
-    </div>
+      </div>
+    </>
   );
 }
 
