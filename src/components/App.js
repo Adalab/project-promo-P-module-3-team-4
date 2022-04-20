@@ -2,13 +2,15 @@ import '../styles/App.scss';
 
 import logo from '../images/logo-adalab.png';
 import team from '../images/logo-team.png';
+import { useState } from 'react';
 
 function App() {
+  const [btnCreate, setSBtnCreate] = useState('disable');
 
   const handleCreateBtn = (ev) => {
     ev.preventDefault();
-    console.log(ev.target);
-  }
+    setSBtnCreate(' ');
+  };
   return (
     <>
       <div className="createpage">
@@ -213,7 +215,10 @@ function App() {
                   <i className="fa-solid fa-angle-up share__container__angle"></i>
                 </div>
                 <div className="button-container">
-                  <button className="button-container__create" onClick={handleCreateBtn}>
+                  <button
+                    className="button-container__create "
+                    onClick={handleCreateBtn}
+                  >
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
                       className="button-container__create__title"

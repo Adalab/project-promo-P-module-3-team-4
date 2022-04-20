@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/b408cf2790.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Awesome profile-cards</title>
+  </head>
+
+  <body class="createpage">
+    <header class="header">
+      <a class="header__link" href="../index.html" title="ir al inicio"> </a>
+    </header>
+
+    <div class="createwrapper">
+      <article class="preview">
+        <button class="reset js-resetButton" type="reset" title="Reset">
+          <i class="fa-solid fa-trash-can reset__can"></i>Reset
+        </button>
+
+        <div class="card js_cardContainer">
+          <div class="card__rectangle js_cardRectangle"></div>
+
+          <h2 class="card__names js_namesCard js_resetNamesCard">
+            nombre apellido
+          </h2>
+          <h3 class="card__profession js_professionCard js_resetJobCard">
+            profesión
+          </h3>
+
+          <div class="card__container-img js__profile-image"></div>
+          <nav class="card__icons">
+            <div class="card__icons__container-mobile js_containerMobile">
+              <a
+                class="js_iconMobile js_resetPhone"
+                title="llamar por teléfono"
+                href=""
+                target="_blank"
+                ><i
+                  class="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile"
+                ></i
+              ></a>
+            </div>
+
+            <div class="card__icons__container-mail js_containerMail">
+              <a
+                class="js_iconMail js_resetMail"
+                title="enviar email"
+                href="mailto:hola@adalab.es"
+                target="_blank"
+                ><i
+                  class="fa-solid fa-envelope card__icons__container-mail__mail"
+                ></i
+              ></a>
+            </div>
+            <div class="card__icons__container-linkedin js_containerLinkedIn">
+              <a
+                class="js_iconLinkedIn js_resetLinkedin"
+                href="https://www.linkedin.com/school/adalab/?originalSubdomain=es"
+                target="_blank"
+                title="ir a perfil de Linkedin"
+                ><i
+                  class="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin"
+                ></i
+              ></a>
+            </div>
+            <div class="card__icons__container-git js_containerGit">
+              <a
+                class="js_iconGit js_resetGithub"
+                href="https://github.com/Adalab/"
+                target="_blank"
+                title="ir a perfil de Github"
+                ><i
+                  class="fa-brands fa-github-alt card__icons__container-git__github"
+                ></i
+              ></a>
+            </div>
+          </nav>
+        </div>
+      </article>
+
+      <form class="form js-form" action="/signup" method="post">
+        <fieldset class="design">
+          <div class="design__legend js-design_legend" title="pincha aqui">
+            <i class="fa-regular fa-object-ungroup icon"></i>
+            <p class="design__titledesign">Diseña</p>
+            <i class="fa-solid fa-angle-up collapsible js-design__triangle"></i>
+          </div>
+
+          <!--palette blue-->
+          <div class="hidden js-design__wrapper">
+            <label for="palette" class="palette">Colores</label>
+            <div class="colors js_colorBlue">
+              <input
+                class="js_button_paletteBlue js_radio1"
+                id="palette"
+                type="radio"
+                name="palette"
+                checked="selected"
+              />
+              <div class="blue1"></div>
+              <div class="blue1__blue2"></div>
+              <div class="blue1__blue3"></div>
+            </div>
+            <!--palette red-->
+            <div class="colors js_colorRed">
+              <input
+                class="js_button_paletteRed"
+                id="palette"
+                type="radio"
+                name="palette"
+              />
+              <div class="red1"></div>
+              <div class="red1__red2"></div>
+              <div class="red1__red3"></div>
+            </div>
+
+            <!--palette mix-->
+            <div class="colors js_colorsMix">
+              <input
+                class="js_button_paletteMix"
+                id="palette"
+                type="radio"
+                name="palette"
+              />
+              <div class="mix1"></div>
+              <div class="mix1__mix2"></div>
+              <div class="mix1__mix3"></div>
+            </div>
+            <!-- palette colors Mix team -->
+            <div class="colors js_colorsMixTeam">
+              <input
+                class="js_button_paletteMixteam"
+                id="palette"
+                type="radio"
+                name="palette"
+              />
+              <div class="mixteam1"></div>
+              <div class="mixteam1__mixteam2"></div>
+              <div class="mixteam1__mixteam3"></div>
+            </div>
+
+            <!--     <div class="colors js_colorsMixTeamPink">
+              <input
+                class="js_button_paletteMixteamPink"
+                id="palette"
+                type="radio"
+                name="palette"
+              />
+              <div class="mixteampink1"></div>
+              <div class="mixteampink1__mixteampink2"></div>
+              <div class="mixteampink1__mixteampink3"></div>
+            </div> -->
+          </div>
+        </fieldset>
+
+        <fieldset class="filled">
+          <div class="filled__legend js-fill_legend" title="pincha aqui">
+            <i class="fa-regular fa-keyboard icon"></i>
+            <p class="filled__title-filled">rellena</p>
+            <i class="fa-solid fa-angle-up collapsible js-fill__triangle"></i>
+          </div>
+          <section class="filled-section hidden js-fill__wrapper">
+            <label class="firstname filled-text" for="name"
+              >Nombre completo</label
+            >
+            <input
+              class="box-text js-inputNames js_resetName"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Ej: Sally Jill"
+              required
+            />
+            <label class="job filled-text" for="job">Puesto</label>
+            <input
+              class="box-text js-inputProfession js_resetJob"
+              id="job"
+              type="text"
+              name="job"
+              placeholder="Ej: Front-end unicorn"
+              required
+            />
+            <label class="image filled-text" for="image"
+              >Imagen de perfil</label
+            >
+
+            <div class="filled-button">
+              <label
+                for="image"
+                class="input-orange box-text js__profile-trigger"
+                >Añadir imagen</label
+              >
+              <input
+                type="file"
+                name
+                id="image"
+                class="hidden-input js__profile-upload-btn"
+              />
+
+              <span class="box-image js__profile-preview"></span>
+            </div>
+
+            <label class="emailadress filled-text" for="email">Email</label>
+            <input
+              class="box-text js_resetEmail"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Ej: sally-hill@gmail.com"
+              required
+            />
+            <label class="phone filled-text" for="phone">Teléfono</label>
+            <input
+              class="box-text js_resetPhone"
+              id="phone"
+              type="tel"
+              name="phone"
+              placeholder="Ej: 555-55-55-55"
+              required
+            />
+            <label class="linkedin filled-text" for="linkedin">Linkedin</label>
+            <input
+              class="box-text js_resetLinkedin"
+              id="linkedin"
+              type="text"
+              name="linkedin"
+              placeholder="Ej: linkedin.com/in/sally.hill "
+              required
+            />
+            <label class="github filled-text" for="github">Github</label>
+            <input
+              class="box-tex js_resetGithub"
+              id="github"
+              type="text"
+              name="name"
+              placeholder="Ej: @sally-hill"
+              required
+            />
+          </section>
+        </fieldset>
+
+        <fieldset class="wrapper-share">
+          <div class="share">
+            <div class="share__container js-share_legend" title="pincha aquí">
+              <i class="fa-solid fa-share-nodes share__container__icon"></i>
+              <p class="share__container__title">comparte</p>
+              <i
+                class="fa-solid fa-angle-up share__container__angle js-share__triangle"
+              ></i>
+            </div>
+            <div class="button-container hidden js-share__wrapper">
+              <button class="button-container__create js-buttonShare">
+                <i
+                  class="fa-solid fa-address-card button-container__create__icon"
+                ></i>
+                <p
+                  class="button-container__create__title"
+                  title="crear tarjeta"
+                >
+                  Crear tarjeta
+                </p>
+              </button>
+            </div>
+          </div>
+
+          <div class="disapear js-shareLinkWrapper">
+            <div class="done">
+              <p class="done__title">La tarjeta ha sido creada:</p>
+              <a
+                class="done__link js-shareLink"
+                title="Ir al enlace de la tarjeta"
+                href=""
+                >https://link tarjeta creada</a
+              >
+              <button
+                class="done__button-twitter js-shareTwitter"
+                title="publicar la tarjeta en twitter"
+              ></button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <img class="footer__img" src="./assets/images/logo-team.png" alt="" />
+        <h2 class="h2">Awesome profile-cards @2018 Equipo 6</h2>
+
+        <a title="adalab" href="https://www.adalab.es/"
+          ><img
+            class="adalab"
+            src="./assets/images/logo-adalab.png"
+            alt="logo adalab"
+        /></a>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>
