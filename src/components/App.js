@@ -12,7 +12,7 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    palette: 1,
+    palette: "1",
     photo: '',
   });
   const handleInput =(ev) => {
@@ -21,12 +21,12 @@ function App() {
 
     setData({...data, [inputProp]: inputValue}) 
   }
-  const [btnCreate, setSBtnCreate] = useState('disable');
+  //const [btnCreate, setSBtnCreate] = useState('disable');
 
-  const handleCreateBtn = (ev) => {
+  /*const handleCreateBtn = (ev) => {
     ev.preventDefault();
     setSBtnCreate(' ');
-  };
+  };*/
   return (
     <>
       <div className="createpage">
@@ -96,7 +96,7 @@ function App() {
               </div>
 
               <div>
-                <label for="palette" className="palette">
+                <label htmlFor="palette" className="palette">
                   Colores
                 </label>
                 <div className="colors">
@@ -104,7 +104,8 @@ function App() {
                     id="palette"
                     type="radio"
                     name="palette"
-                    checked="selected"
+                    value="1"
+                    checked={data.palette === "1"}
                     onChange={handleInput}
                   />
                   <div className="blue1"></div>
@@ -113,21 +114,21 @@ function App() {
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
+                  <input id="palette" type="radio" name="palette" value="2" checked={data.palette === "2"} onChange={handleInput}/>
                   <div className="red1"></div>
                   <div className="red1__red2"></div>
                   <div className="red1__red3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
+                  <input id="palette" type="radio" name="palette" value="3" checked={data.palette === "3"} onChange={handleInput}/>
                   <div className="mix1"></div>
                   <div className="mix1__mix2"></div>
                   <div className="mix1__mix3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
+                  <input id="palette" type="radio" name="palette" value="4" checked={data.palette === "4"} onChange={handleInput}/>
                   <div className="mixteam1"></div>
                   <div className="mixteam1__mixteam2"></div>
                   <div className="mixteam1__mixteam3"></div>
@@ -142,7 +143,7 @@ function App() {
                 <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
               <section className="filled-section">
-                <label className="firstname filled-text" for="name">
+                <label className="firstname filled-text" htmlFor="name">
                   Nombre completo
                 </label>
                 <input
@@ -155,7 +156,7 @@ function App() {
                   value= {data.name}
                   onChange={handleInput}
                 />
-                <label className="job filled-text" for="job">
+                <label className="job filled-text" htmlFor="job">
                   Puesto
                 </label>
                 <input
@@ -168,20 +169,20 @@ function App() {
                   value= {data.job}
                   onChange={handleInput}
                 />
-                <label className="image filled-text" for="image">
+                <label className="image filled-text" htmlFor="image">
                   Imagen de perfil
                 </label>
 
                 <div className="filled-button">
-                  <label for="image" className="input-orange box-text">
+                  <label htmlFor="image" className="input-orange box-text">
                     Añadir imagen
                   </label>
-                  <input type="file" name id="image" className="hidden-input"/>
+                  <input id="image" className="hidden-input"/>
 
                   <span className="box-image"></span>
                 </div>
 
-                <label className="emailadress filled-text" for="email">
+                <label className="emailadress filled-text" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -194,7 +195,7 @@ function App() {
                   value= {data.email}
                   onChange={handleInput}
                 />
-                <label className="phone filled-text" for="phone">
+                <label className="phone filled-text" htmlFor="phone">
                   Teléfono
                 </label>
                 <input
@@ -207,7 +208,7 @@ function App() {
                   value= {data.phone}
                   onChange={handleInput}
                 />
-                <label className="linkedin filled-text" for="linkedin">
+                <label className="linkedin filled-text" htmlFor="linkedin">
                   Linkedin
                 </label>
                 <input
@@ -220,7 +221,7 @@ function App() {
                   value= {data.linkedin}
                   onChange={handleInput}
                 />
-                <label className="github filled-text" for="github">
+                <label className="github filled-text" htmlFor="github">
                   Github
                 </label>
                 <input
@@ -246,7 +247,7 @@ function App() {
                 <div className="button-container">
                   <button
                     className="button-container__create "
-                    onClick={handleCreateBtn}
+                    //onClick={handleCreateBtn}
                   >
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
