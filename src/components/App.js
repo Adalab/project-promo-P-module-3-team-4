@@ -5,6 +5,22 @@ import team from '../images/logo-team.png';
 import { useState } from 'react';
 
 function App() {
+  const [data, setData] = useState({
+    name: '',
+    job: '',
+    email: '',
+    phone: '',
+    linkedin: '',
+    github: '',
+    palette: 1,
+    photo: '',
+  });
+  const handleInput =(ev) => {
+    const inputValue = ev.target.value;
+    const inputProp = ev.target.name;
+
+    setData({...data, [inputProp]: inputValue}) 
+  }
   const [btnCreate, setSBtnCreate] = useState('disable');
 
   const handleCreateBtn = (ev) => {
@@ -29,8 +45,8 @@ function App() {
             <div className="card ">
               <div className="card__rectangle "></div>
 
-              <h2 className="card__names ">nombre apellido</h2>
-              <h3 className="card__profession ">profesión</h3>
+              <h2 className="card__names ">{data.name || "Nombre Apellido"}</h2>
+              <h3 className="card__profession ">{data.job || "Profesión"}</h3>
 
               <div className="card__container-img "></div>
               <nav className="card__icons">
@@ -89,6 +105,7 @@ function App() {
                     type="radio"
                     name="palette"
                     checked="selected"
+                    onChange={handleInput}
                   />
                   <div className="blue1"></div>
                   <div className="blue1__blue2"></div>
@@ -96,21 +113,21 @@ function App() {
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" />
+                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
                   <div className="red1"></div>
                   <div className="red1__red2"></div>
                   <div className="red1__red3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" />
+                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
                   <div className="mix1"></div>
                   <div className="mix1__mix2"></div>
                   <div className="mix1__mix3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" />
+                  <input id="palette" type="radio" name="palette" onChange={handleInput}/>
                   <div className="mixteam1"></div>
                   <div className="mixteam1__mixteam2"></div>
                   <div className="mixteam1__mixteam3"></div>
@@ -135,6 +152,8 @@ function App() {
                   name="name"
                   placeholder="Ej: Sally Jill"
                   required
+                  value= {data.name}
+                  onChange={handleInput}
                 />
                 <label className="job filled-text" for="job">
                   Puesto
@@ -146,6 +165,8 @@ function App() {
                   name="job"
                   placeholder="Ej: Front-end unicorn"
                   required
+                  value= {data.job}
+                  onChange={handleInput}
                 />
                 <label className="image filled-text" for="image">
                   Imagen de perfil
@@ -155,7 +176,7 @@ function App() {
                   <label for="image" className="input-orange box-text">
                     Añadir imagen
                   </label>
-                  <input type="file" name id="image" className="hidden-input" />
+                  <input type="file" name id="image" className="hidden-input"/>
 
                   <span className="box-image"></span>
                 </div>
@@ -170,6 +191,8 @@ function App() {
                   name="email"
                   placeholder="Ej: sally-hill@gmail.com"
                   required
+                  value= {data.email}
+                  onChange={handleInput}
                 />
                 <label className="phone filled-text" for="phone">
                   Teléfono
@@ -181,6 +204,8 @@ function App() {
                   name="phone"
                   placeholder="Ej: 555-55-55-55"
                   required
+                  value= {data.phone}
+                  onChange={handleInput}
                 />
                 <label className="linkedin filled-text" for="linkedin">
                   Linkedin
@@ -192,6 +217,8 @@ function App() {
                   name="linkedin"
                   placeholder="Ej: linkedin.com/in/sally.hill "
                   required
+                  value= {data.linkedin}
+                  onChange={handleInput}
                 />
                 <label className="github filled-text" for="github">
                   Github
@@ -203,6 +230,8 @@ function App() {
                   name="name"
                   placeholder="Ej: @sally-hill"
                   required
+                  value= {data.github}
+                  onChange={handleInput}
                 />
               </section>
             </fieldset>
