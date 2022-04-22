@@ -11,141 +11,141 @@
 //CAMBIOS DE COLOR DE PREVIEW - JS
 
 //CAMBIO A ROJO
-.paletteRed {
-  .card__rectangle {
-    background-color: $rusty-red;
-  }
-  .card__names {
-    color: $dried-blood;
-  }
+// .paletteRed {
+//   .card__rectangle {
+//     background-color: $rusty-red;
+//   }
+//   .card__names {
+//     color: $dried-blood;
+//   }
 
-  .card__icons__container-mobile {
-    border: solid 2px $tomato;
-    &__mobile {
-      color: $dried-blood;
-    }
-  }
-  .card__icons__container-mail {
-    border: solid 2px $tomato;
-    &__mail {
-      color: $dried-blood;
-    }
-  }
-  .card__icons__container-linkedin {
-    border: solid 2px $tomato;
-    &__linkedin {
-      color: $dried-blood;
-    }
-  }
-  .card__icons__container-git {
-    border: solid 2px $tomato;
-    &__github {
-      color: $dried-blood;
-    }
-  }
-}
+//   .card__icons__container-mobile {
+//     border: solid 2px $tomato;
+//     &__mobile {
+//       color: $dried-blood;
+//     }
+//   }
+//   .card__icons__container-mail {
+//     border: solid 2px $tomato;
+//     &__mail {
+//       color: $dried-blood;
+//     }
+//   }
+//   .card__icons__container-linkedin {
+//     border: solid 2px $tomato;
+//     &__linkedin {
+//       color: $dried-blood;
+//     }
+//   }
+//   .card__icons__container-git {
+//     border: solid 2px $tomato;
+//     &__github {
+//       color: $dried-blood;
+//     }
+//   }
+// }
 
 //CAMBIO A MIX
-.paletteMix {
-  .card__rectangle {
-    background-color: $faded-orange;
-  }
-  .card__names {
-    color: $slate;
-  }
+// .paletteMix {
+//   .card__rectangle {
+//     background-color: $faded-orange;
+//   }
+//   .card__names {
+//     color: $slate;
+//   }
 
-  .card__icons__container-mobile {
-    border: solid 2px $light-grey-blue;
-    &__mobile {
-      color: $slate;
-    }
-  }
-  .card__icons__container-mail {
-    border: solid 2px $light-grey-blue;
-    &__mail {
-      color: $slate;
-    }
-  }
-  .card__icons__container-linkedin {
-    border: solid 2px $light-grey-blue;
-    &__linkedin {
-      color: $slate;
-    }
-  }
-  .card__icons__container-git {
-    border: solid 2px $light-grey-blue;
-    &__github {
-      color: $slate;
-    }
-  }
-}
+//   .card__icons__container-mobile {
+//     border: solid 2px $light-grey-blue;
+//     &__mobile {
+//       color: $slate;
+//     }
+//   }
+//   .card__icons__container-mail {
+//     border: solid 2px $light-grey-blue;
+//     &__mail {
+//       color: $slate;
+//     }
+//   }
+//   .card__icons__container-linkedin {
+//     border: solid 2px $light-grey-blue;
+//     &__linkedin {
+//       color: $slate;
+//     }
+//   }
+//   .card__icons__container-git {
+//     border: solid 2px $light-grey-blue;
+//     &__github {
+//       color: $slate;
+//     }
+//   }
+// }
 
 //CAMBIO A BLUE
-.paletteBlue {
-  .card__rectangle {
-    background-color: $dirty-blue;
-  }
-  .card__names {
-    color: $branddark;
-  }
+// .paletteBlue {
+//   .card__rectangle {
+//     background-color: $dirty-blue;
+//   }
+//   .card__names {
+//     color: $branddark;
+//   }
 
-  .card__icons__container-mobile {
-    border: solid 2px $hospital-green;
-    &__mobile {
-      color: $branddark;
-    }
-  }
-  .card__icons__container-mail {
-    border: solid 2px $hospital-green;
-    &__mail {
-      color: $branddark;
-    }
-  }
-  .card__icons__container-linkedin {
-    border: solid 2px $hospital-green;
-    &__linkedin {
-      color: $branddark;
-    }
-  }
-  .card__icons__container-git {
-    border: solid 2px $hospital-green;
-    &__github {
-      color: $branddark;
-    }
-  }
-}
+//   .card__icons__container-mobile {
+//     border: solid 2px $hospital-green;
+//     &__mobile {
+//       color: $branddark;
+//     }
+//   }
+//   .card__icons__container-mail {
+//     border: solid 2px $hospital-green;
+//     &__mail {
+//       color: $branddark;
+//     }
+//   }
+//   .card__icons__container-linkedin {
+//     border: solid 2px $hospital-green;
+//     &__linkedin {
+//       color: $branddark;
+//     }
+//   }
+//   .card__icons__container-git {
+//     border: solid 2px $hospital-green;
+//     &__github {
+//       color: $branddark;
+//     }
+//   }
+// }
 
 //CAMBIO A TEAM
-.paletteTeam {
-  .card__rectangle {
-    background-color: $team1;
-  }
-  .card__names {
-    color: $team3;
-  }
+// .paletteTeam {
+//   .card__rectangle {
+//     background-color: $team1;
+//   }
+//   .card__names {
+//     color: $team3;
+//   }
 
-  .card__icons__container-mobile {
-    border: solid 2px $team2;
-    &__mobile {
-      color: $team3;
-    }
-  }
-  .card__icons__container-mail {
-    border: solid 2px $team2;
-    &__mail {
-      color: $team3;
-    }
-  }
-  .card__icons__container-linkedin {
-    border: solid 2px $team2;
-    &__linkedin {
-      color: $team3;
-    }
-  }
-  .card__icons__container-git {
-    border: solid 2px $team2;
-    &__github {
-      color: $team3;
-    }
-  }
-}
+//   .card__icons__container-mobile {
+//     border: solid 2px $team2;
+//     &__mobile {
+//       color: $team3;
+//     }
+//   }
+//   .card__icons__container-mail {
+//     border: solid 2px $team2;
+//     &__mail {
+//       color: $team3;
+//     }
+//   }
+//   .card__icons__container-linkedin {
+//     border: solid 2px $team2;
+//     &__linkedin {
+//       color: $team3;
+//     }
+//   }
+//   .card__icons__container-git {
+//     border: solid 2px $team2;
+//     &__github {
+//       color: $team3;
+//     }
+//   }
+// }

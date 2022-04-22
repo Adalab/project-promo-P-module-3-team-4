@@ -42,45 +42,47 @@ function App() {
               <i className="fa-solid fa-trash-can reset__can"></i>Reset
             </button>
 
-            <div className="card ">
-              <div className="card__rectangle "></div>
+            <div className="card palette4 ">
+              <div className="card__rectangle rectangle "></div>
 
-              <h2 className="card__names ">{data.name || 'Nombre Apellido'}</h2>
+              <h2 className="card__names name ">
+                {data.name || 'Nombre Apellido'}
+              </h2>
               <h3 className="card__profession ">{data.job || 'Profesión'}</h3>
 
               <div className="card__container-img "></div>
-              <nav className="card__icons">
-                <div className="card__icons__container-mobile ">
+              <nav className="card__icons icons">
+                <div className="card__icons__container-mobile border ">
                   <a title="llamar por teléfono" href="1#" target="blank">
-                    <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile"></i>
+                    <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile link"></i>
                   </a>
                 </div>
 
-                <div className="card__icons__container-mail">
+                <div className="card__icons__container-mail border">
                   <a
                     title="enviar email"
                     href="mailto:hola@adalab.es"
                     target="blank"
                   >
-                    <i className="fa-solid fa-envelope card__icons__container-mail__mail"></i>
+                    <i className="fa-solid fa-envelope card__icons__container-mail__mail link"></i>
                   </a>
                 </div>
-                <div className="card__icons__container-linkedin">
+                <div className="card__icons__container-linkedin border">
                   <a
                     href="https://www.linkedin.com/school/adalab/?originalSubdomain=es"
                     target="blank"
                     title="ir a perfil de Linkedin"
                   >
-                    <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin"></i>
+                    <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin link"></i>
                   </a>
                 </div>
-                <div className="card__icons__container-git">
+                <div className="card__icons__container-git border">
                   <a
                     href="https://github.com/Adalab/"
                     target="blank"
                     title="ir a perfil de Github"
                   >
-                    <i className="fa-brands fa-github-alt card__icons__container-git__github"></i>
+                    <i className="fa-brands fa-github-alt card__icons__container-git__github link"></i>
                   </a>
                 </div>
               </nav>

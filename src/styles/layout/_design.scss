@@ -93,3 +93,75 @@
     background: #a04668;
   }
 }
+
+.palette1 {
+  .rectangle {
+    background-color: $dirty-blue !important;
+  }
+  .name {
+    color: $branddark !important;
+  }
+  .icons {
+    .border {
+      border: 2px solid $hospital-green !important;
+
+      .link {
+        color: $branddark !important;
+      }
+    }
+  }
+}
+
+.palette2 {
+  .rectangle {
+    background-color: $rusty-red !important;
+  }
+  .name {
+    color: $dried-blood !important;
+  }
+  .icons {
+    .border {
+      border: 2px solid $tomato !important;
+
+      .link {
+        color: $dried-blood !important;
+      }
+    }
+  }
+}
+
+.palette3 {
+  .rectangle {
+    background-color: $faded-orange !important;
+  }
+  .name {
+    color: $slate !important;
+  }
+  .icons {
+    .border {
+      border: 2px solid $light-grey-blue !important;
+
+      .link {
+        color: $slate !important;
+      }
+    }
+  }
+}
+
+.palette4 {
+  .rectangle {
+    background-color: $team2 !important;
+  }
+  .name {
+    color: $team1 !important;
+  }
+  .icons {
+    .border {
+      border: 2px solid $team3 !important;
+
+      .link {
+        color: $team1 !important;
+      }
+    }
+  }
+}
