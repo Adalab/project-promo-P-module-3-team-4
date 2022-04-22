@@ -273,7 +273,7 @@ function App() {
                   Github
                 </label>
                 <input
-                  className="box-tex"
+                  className="box-text"
                   id="github"
                   type="text"
                   name="github"
