@@ -12,13 +12,14 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    palette: '1',
+    palette: 1,
     photo: '',
   });
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
 
+    console.log(inputValue);
     setData({ ...data, [inputProp]: inputValue });
   };
   //const [btnCreate, setSBtnCreate] = useState('disable');
@@ -42,7 +43,7 @@ function App() {
               <i className="fa-solid fa-trash-can reset__can"></i>Reset
             </button>
 
-            <div className="card palette1 ">
+            <div className={`card palette${data.palette}`}>
               <div className="card__rectangle rectangle "></div>
 
               <h2 className="card__names name ">
