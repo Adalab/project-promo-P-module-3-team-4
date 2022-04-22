@@ -42,7 +42,7 @@ function App() {
               <i className="fa-solid fa-trash-can reset__can"></i>Reset
             </button>
 
-            <div className="card palette4 ">
+            <div className="card palette1 ">
               <div className="card__rectangle rectangle "></div>
 
               <h2 className="card__names name ">
@@ -53,7 +53,11 @@ function App() {
               <div className="card__container-img "></div>
               <nav className="card__icons icons">
                 <div className="card__icons__container-mobile border ">
-                  <a title="llamar por teléfono" href="1#" target="blank">
+                  <a
+                    title="llamar por teléfono"
+                    href={data.phone}
+                    target="blank"
+                  >
                     <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile link"></i>
                   </a>
                 </div>
@@ -61,7 +65,7 @@ function App() {
                 <div className="card__icons__container-mail border">
                   <a
                     title="enviar email"
-                    href="mailto:hola@adalab.es"
+                    href={`mailto:${data.email}`}
                     target="blank"
                   >
                     <i className="fa-solid fa-envelope card__icons__container-mail__mail link"></i>
@@ -69,7 +73,7 @@ function App() {
                 </div>
                 <div className="card__icons__container-linkedin border">
                   <a
-                    href="https://www.linkedin.com/school/adalab/?originalSubdomain=es"
+                    href={`https://www.linkedin.com/${data.linkedin}`}
                     target="blank"
                     title="ir a perfil de Linkedin"
                   >
@@ -78,7 +82,7 @@ function App() {
                 </div>
                 <div className="card__icons__container-git border">
                   <a
-                    href="https://github.com/Adalab/"
+                    href={`https://github.com/${data.github}`}
                     target="blank"
                     title="ir a perfil de Github"
                   >
