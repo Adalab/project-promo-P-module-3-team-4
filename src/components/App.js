@@ -22,6 +22,21 @@ function App() {
     console.log(inputValue);
     setData({ ...data, [inputProp]: inputValue });
   };
+
+  const handleReset = (ev) => {
+    ev.preventDefault();
+
+    setData({
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      palette: 1,
+      photo: '',
+    });
+  };
   //const [btnCreate, setSBtnCreate] = useState('disable');
 
   /*const handleCreateBtn = (ev) => {
@@ -39,7 +54,12 @@ function App() {
 
         <div className="createwrapper">
           <article className="preview">
-            <button className="reset " type="reset" title="Reset">
+            <button
+              className="reset "
+              type="reset"
+              title="Reset"
+              onClick={handleReset}
+            >
               <i className="fa-solid fa-trash-can reset__can"></i>Reset
             </button>
 
@@ -256,7 +276,7 @@ function App() {
                   className="box-tex"
                   id="github"
                   type="text"
-                  name="name"
+                  name="github"
                   placeholder="Ej: @sally-hill"
                   required
                   value={data.github}
