@@ -132,7 +132,8 @@ function App() {
                     type="radio"
                     name="palette"
                     value="1"
-                    checked={data.palette === '1'}
+                    // revisar esto
+                    checked={data.palette === '1' ? true : '1'}
                     onChange={handleInput}
                   />
                   <div className="blue1 square"></div>
