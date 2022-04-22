@@ -34,87 +34,62 @@
 
 /*PALETA DE COLORES*/
 
-.blue1 {
+.square {
   width: 30px;
   height: 25px;
+}
+
+.blue1 {
   background: $branddark;
 
   &__blue2 {
-    width: 30px;
-    height: 25px;
     background: $dirty-blue;
   }
 
   &__blue3 {
-    width: 30px;
-    height: 25px;
     background: $hospital-green;
   }
 }
 
 .red1 {
-  width: 30px;
-  height: 25px;
   background: $dried-blood;
 
   &__red2 {
-    width: 30px;
-    height: 25px;
     background: $rusty-red;
   }
   &__red3 {
-    width: 30px;
-    height: 25px;
     background: $tomato;
   }
 }
 
 .mix1 {
-  width: 30px;
-  height: 25px;
   background: $slate;
 
   &__mix2 {
-    width: 30px;
-    height: 25px;
     background: $faded-orange;
   }
   &__mix3 {
-    width: 30px;
-    height: 25px;
     background: $light-grey-blue;
   }
 }
 
 .mixteam1 {
-  width: 30px;
-  height: 25px;
   background: $team1;
 
   &__mixteam2 {
-    width: 30px;
-    height: 25px;
     background: $team2;
   }
   &__mixteam3 {
-    width: 30px;
-    height: 25px;
     background: $team3;
   }
 }
-/* .mixteampink1 {
-  width: 30px;
-  height: 25px;
+.mixteampink1 {
   background: #d9d0de;
 
   &__mixteampink2 {
-    width: 30px;
-    height: 25px;
     background: #bc8da0;
   }
   &__mixteampink3 {
-    width: 30px;
-    height: 25px;
     background: #a04668;
   }
-} */
+}

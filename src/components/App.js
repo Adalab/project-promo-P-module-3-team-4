@@ -12,15 +12,15 @@ function App() {
     phone: '',
     linkedin: '',
     github: '',
-    palette: "1",
+    palette: '1',
     photo: '',
   });
-  const handleInput =(ev) => {
+  const handleInput = (ev) => {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
 
-    setData({...data, [inputProp]: inputValue}) 
-  }
+    setData({ ...data, [inputProp]: inputValue });
+  };
   //const [btnCreate, setSBtnCreate] = useState('disable');
 
   /*const handleCreateBtn = (ev) => {
@@ -45,8 +45,8 @@ function App() {
             <div className="card ">
               <div className="card__rectangle "></div>
 
-              <h2 className="card__names ">{data.name || "Nombre Apellido"}</h2>
-              <h3 className="card__profession ">{data.job || "Profesión"}</h3>
+              <h2 className="card__names ">{data.name || 'Nombre Apellido'}</h2>
+              <h3 className="card__profession ">{data.job || 'Profesión'}</h3>
 
               <div className="card__container-img "></div>
               <nav className="card__icons">
@@ -105,33 +105,54 @@ function App() {
                     type="radio"
                     name="palette"
                     value="1"
-                    checked={data.palette === "1"}
+                    checked={data.palette === '1'}
                     onChange={handleInput}
                   />
-                  <div className="blue1"></div>
-                  <div className="blue1__blue2"></div>
-                  <div className="blue1__blue3"></div>
+                  <div className="blue1 square"></div>
+                  <div className="blue1__blue2 square"></div>
+                  <div className="blue1__blue3 square"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" value="2" checked={data.palette === "2"} onChange={handleInput}/>
-                  <div className="red1"></div>
-                  <div className="red1__red2"></div>
-                  <div className="red1__red3"></div>
+                  <input
+                    id="palette"
+                    type="radio"
+                    name="palette"
+                    value="2"
+                    checked={data.palette === '2'}
+                    onChange={handleInput}
+                  />
+                  <div className="square red1"></div>
+                  <div className="square red1__red2"></div>
+                  <div className="square red1__red3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" value="3" checked={data.palette === "3"} onChange={handleInput}/>
-                  <div className="mix1"></div>
-                  <div className="mix1__mix2"></div>
-                  <div className="mix1__mix3"></div>
+                  <input
+                    id="palette"
+                    type="radio"
+                    name="palette"
+                    value="3"
+                    checked={data.palette === '3'}
+                    onChange={handleInput}
+                  />
+                  <div className="square mix1"></div>
+                  <div className="square mix1__mix2"></div>
+                  <div className="square mix1__mix3"></div>
                 </div>
 
                 <div className="colors">
-                  <input id="palette" type="radio" name="palette" value="4" checked={data.palette === "4"} onChange={handleInput}/>
-                  <div className="mixteam1"></div>
-                  <div className="mixteam1__mixteam2"></div>
-                  <div className="mixteam1__mixteam3"></div>
+                  <input
+                    id="palette"
+                    type="radio"
+                    name="palette"
+                    value="4"
+                    checked={data.palette === '4'}
+                    onChange={handleInput}
+                  />
+                  <div className="square mixteam1"></div>
+                  <div className="square mixteam1__mixteam2"></div>
+                  <div className="square mixteam1__mixteam3"></div>
                 </div>
               </div>
             </fieldset>
@@ -153,7 +174,7 @@ function App() {
                   name="name"
                   placeholder="Ej: Sally Jill"
                   required
-                  value= {data.name}
+                  value={data.name}
                   onChange={handleInput}
                 />
                 <label className="job filled-text" htmlFor="job">
@@ -166,7 +187,7 @@ function App() {
                   name="job"
                   placeholder="Ej: Front-end unicorn"
                   required
-                  value= {data.job}
+                  value={data.job}
                   onChange={handleInput}
                 />
                 <label className="image filled-text" htmlFor="image">
@@ -177,7 +198,7 @@ function App() {
                   <label htmlFor="image" className="input-orange box-text">
                     Añadir imagen
                   </label>
-                  <input id="image" className="hidden-input"/>
+                  <input id="image" className="hidden-input" />
 
                   <span className="box-image"></span>
                 </div>
@@ -192,7 +213,7 @@ function App() {
                   name="email"
                   placeholder="Ej: sally-hill@gmail.com"
                   required
-                  value= {data.email}
+                  value={data.email}
                   onChange={handleInput}
                 />
                 <label className="phone filled-text" htmlFor="phone">
@@ -205,7 +226,7 @@ function App() {
                   name="phone"
                   placeholder="Ej: 555-55-55-55"
                   required
-                  value= {data.phone}
+                  value={data.phone}
                   onChange={handleInput}
                 />
                 <label className="linkedin filled-text" htmlFor="linkedin">
@@ -218,7 +239,7 @@ function App() {
                   name="linkedin"
                   placeholder="Ej: linkedin.com/in/sally.hill "
                   required
-                  value= {data.linkedin}
+                  value={data.linkedin}
                   onChange={handleInput}
                 />
                 <label className="github filled-text" htmlFor="github">
@@ -231,7 +252,7 @@ function App() {
                   name="name"
                   placeholder="Ej: @sally-hill"
                   required
-                  value= {data.github}
+                  value={data.github}
                   onChange={handleInput}
                 />
               </section>
