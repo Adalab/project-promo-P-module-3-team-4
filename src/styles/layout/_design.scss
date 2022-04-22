@@ -83,30 +83,20 @@
     background: $team3;
   }
 }
-.mixteampink1 {
-  background: #d9d0de;
-
-  &__mixteampink2 {
-    background: #bc8da0;
-  }
-  &__mixteampink3 {
-    background: #a04668;
-  }
-}
 
 .palette1 {
   .rectangle {
-    background-color: $dirty-blue !important;
+    background-color: $dirty-blue;
   }
   .name {
-    color: $branddark !important;
+    color: $branddark;
   }
   .icons {
     .border {
-      border: 2px solid $hospital-green !important;
+      border: 2px solid $hospital-green;
 
       .link {
-        color: $branddark !important;
+        color: $branddark;
       }
     }
   }
@@ -114,17 +104,17 @@
 
 .palette2 {
   .rectangle {
-    background-color: $rusty-red !important;
+    background-color: $rusty-red;
   }
   .name {
-    color: $dried-blood !important;
+    color: $dried-blood;
   }
   .icons {
     .border {
-      border: 2px solid $tomato !important;
+      border: 2px solid $tomato;
 
       .link {
-        color: $dried-blood !important;
+        color: $dried-blood;
       }
     }
   }
@@ -132,17 +122,17 @@
 
 .palette3 {
   .rectangle {
-    background-color: $faded-orange !important;
+    background-color: $faded-orange;
   }
   .name {
-    color: $slate !important;
+    color: $slate;
   }
   .icons {
     .border {
-      border: 2px solid $light-grey-blue !important;
+      border: 2px solid $light-grey-blue;
 
       .link {
-        color: $slate !important;
+        color: $slate;
       }
     }
   }
@@ -150,17 +140,17 @@
 
 .palette4 {
   .rectangle {
-    background-color: $team2 !important;
+    background-color: $team2;
   }
   .name {
-    color: $team1 !important;
+    color: $team1;
   }
   .icons {
     .border {
-      border: 2px solid $team3 !important;
+      border: 2px solid $team3;
 
       .link {
-        color: $team1 !important;
+        color: $team1;
       }
     }
   }
