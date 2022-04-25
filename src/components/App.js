@@ -1,5 +1,4 @@
 import '../styles/App.scss';
-
 import logo from '../images/logo-adalab.png';
 import team from '../images/logo-team.png';
 import { useState } from 'react';
@@ -15,6 +14,13 @@ function App() {
     palette: 1,
     photo: '',
   });
+  const [classCollapsible, setClassCollapsible] = useState({
+    design: 'hidden',
+    stuffed: 'hidden',
+    share: 'hidden',
+  });
+
+
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
@@ -37,6 +43,40 @@ function App() {
       photo: '',
     });
   };
+
+  const handleCollapsible = (ev) => {
+
+    const idClass = ev.target.id;
+    console.log(idClass);
+    if (idClass === 'design') { 
+      if (classCollapsible.design === 'hidden') {
+        setClassCollapsible({design: ''});
+        setClassCollapsible({stuffed: 'hidden'});
+        setClassCollapsible({share: 'hidden'});
+      } else {
+        setClassCollapsible({design: 'hidden'});
+      }
+    }
+    if (idClass === 'stuffed') {
+      if (classCollapsible.stuffed === 'hidden') {
+        setClassCollapsible({stuffed: ''});
+        setClassCollapsible({design: 'hidden'});
+        setClassCollapsible({share: 'hidden'})
+      } else {
+        setClassCollapsible({stuffed: 'hidden'});
+      }
+    }
+    if (idClass === 'share') {
+      if (classCollapsible.share === 'hidden') {
+        setClassCollapsible({share: ''});
+        setClassCollapsible({stuffed: 'hidden'});
+        setClassCollapsible({design: 'hidden'})
+      } else {
+        setClassCollapsible({share: 'hidden'});
+      }
+  }
+}
+
   //const [btnCreate, setSBtnCreate] = useState('disable');
 
   /*const handleCreateBtn = (ev) => {
@@ -116,13 +156,13 @@ function App() {
 
           <form className="form" action="/signup" method="post">
             <fieldset className="design">
-              <div className="design__legend" title="pincha aqui">
+              <div className="design__legend" title="pincha aqui" onClick={handleCollapsible} id="design">
                 <i className="fa-regular fa-object-ungroup icon"></i>
                 <p className="design__titledesign">Diseña</p>
                 <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
 
-              <div>
+              <div className={classCollapsible.design}>
                 <label htmlFor="palette" className="palette">
                   Colores
                 </label>
@@ -133,7 +173,7 @@ function App() {
                     name="palette"
                     value="1"
                     // revisar esto
-                    checked={data.palette === '1' ? true : '1'}
+                    checked={data.palette === '1'}
                     onChange={handleInput}
                   />
                   <div className="blue1 square"></div>
@@ -186,12 +226,12 @@ function App() {
             </fieldset>
 
             <fieldset className="filled">
-              <div className="filled__legend" title="pincha aqui">
+              <div className="filled__legend" title="pincha aqui" onClick={handleCollapsible} id="stuffed">
                 <i className="fa-regular fa-keyboard icon"></i>
                 <p className="filled__title-filled">rellena</p>
                 <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
-              <section className="filled-section">
+              <section className={`filled-section ${classCollapsible.stuffed}`}>
                 <label className="firstname filled-text" htmlFor="name">
                   Nombre completo
                 </label>
@@ -288,12 +328,12 @@ function App() {
 
             <fieldset className="wrapper-share">
               <div className="share">
-                <div className="share__container" title="pincha aquí">
+                <div className="share__container" title="pincha aquí" onClick={handleCollapsible} id="share">
                   <i className="fa-solid fa-share-nodes share__container__icon"></i>
                   <p className="share__container__title">comparte</p>
                   <i className="fa-solid fa-angle-up share__container__angle"></i>
                 </div>
-                <div className="button-container">
+                <div className={`button-container ${classCollapsible.share}`}>
                   <button
                     className="button-container__create "
                     //onClick={handleCreateBtn}
@@ -309,8 +349,8 @@ function App() {
                 </div>
               </div>
 
-              <div className="disapear">
-                <div className="done">
+              <div>
+                <div className={`done ${classCollapsible.share}`}>
                   <p className="done__title">La tarjeta ha sido creada:</p>
                   <a
                     className="done__link"
