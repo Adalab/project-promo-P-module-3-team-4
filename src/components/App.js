@@ -15,12 +15,15 @@ function App() {
     photo: '',
   });
   const [classCollapsible, setClassCollapsible] = useState({
-    design: 'hidden',
+    design: '',
     stuffed: 'hidden',
     share: 'hidden',
   });
-
-
+  // const [classArrow, setClassArrow] = useState({
+  //   design: 'turn',
+  //   stuffed: 'turn',
+  //   share: 'turn',
+  // });
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
@@ -45,37 +48,50 @@ function App() {
   };
 
   const handleCollapsible = (ev) => {
-
     const idClass = ev.target.id;
     console.log(idClass);
-    if (idClass === 'design') { 
+    const overallCollapsables = {
+      stuffed: 'hidden',
+      share: 'hidden',
+      design: 'hidden',
+    };
+    if (idClass === 'design') {
       if (classCollapsible.design === 'hidden') {
-        setClassCollapsible({design: ''});
-        setClassCollapsible({stuffed: 'hidden'});
-        setClassCollapsible({share: 'hidden'});
+        const designCollapsable = {
+          stuffed: 'hidden',
+          share: 'hidden',
+          design: '',
+        };
+        setClassCollapsible(designCollapsable);
       } else {
-        setClassCollapsible({design: 'hidden'});
+        setClassCollapsible(overallCollapsables);
       }
     }
     if (idClass === 'stuffed') {
       if (classCollapsible.stuffed === 'hidden') {
-        setClassCollapsible({stuffed: ''});
-        setClassCollapsible({design: 'hidden'});
-        setClassCollapsible({share: 'hidden'})
+        const stuffedCollapsable = {
+          stuffed: '',
+          share: 'hidden',
+          design: 'hidden',
+        };
+        setClassCollapsible(stuffedCollapsable);
       } else {
-        setClassCollapsible({stuffed: 'hidden'});
+        setClassCollapsible(overallCollapsables);
       }
     }
     if (idClass === 'share') {
       if (classCollapsible.share === 'hidden') {
-        setClassCollapsible({share: ''});
-        setClassCollapsible({stuffed: 'hidden'});
-        setClassCollapsible({design: 'hidden'})
+        const shareCollapsable = {
+          stuffed: 'hidden',
+          design: 'hidden',
+          share: '',
+        };
+        setClassCollapsible(shareCollapsable);
       } else {
-        setClassCollapsible({share: 'hidden'});
+        setClassCollapsible(overallCollapsables);
       }
-  }
-}
+    }
+  };
 
   //const [btnCreate, setSBtnCreate] = useState('disable');
 
@@ -156,10 +172,15 @@ function App() {
 
           <form className="form" action="/signup" method="post">
             <fieldset className="design">
-              <div className="design__legend" title="pincha aqui" onClick={handleCollapsible} id="design">
+              <div
+                className="design__legend"
+                title="pincha aqui"
+                onClick={handleCollapsible}
+                id="design"
+              >
                 <i className="fa-regular fa-object-ungroup icon"></i>
                 <p className="design__titledesign">Diseña</p>
-                <i className="fa-solid fa-angle-up collapsible"></i>
+                <i className="fa-solid fa-angle-up collapsible turn"></i>
               </div>
 
               <div className={classCollapsible.design}>
@@ -226,10 +247,15 @@ function App() {
             </fieldset>
 
             <fieldset className="filled">
-              <div className="filled__legend" title="pincha aqui" onClick={handleCollapsible} id="stuffed">
+              <div
+                className="filled__legend"
+                title="pincha aqui"
+                onClick={handleCollapsible}
+                id="stuffed"
+              >
                 <i className="fa-regular fa-keyboard icon"></i>
                 <p className="filled__title-filled">rellena</p>
-                <i className="fa-solid fa-angle-up collapsible"></i>
+                <i className="fa-solid fa-angle-up collapsible "></i>
               </div>
               <section className={`filled-section ${classCollapsible.stuffed}`}>
                 <label className="firstname filled-text" htmlFor="name">
@@ -328,10 +354,15 @@ function App() {
 
             <fieldset className="wrapper-share">
               <div className="share">
-                <div className="share__container" title="pincha aquí" onClick={handleCollapsible} id="share">
+                <div
+                  className="share__container"
+                  title="pincha aquí"
+                  onClick={handleCollapsible}
+                  id="share"
+                >
                   <i className="fa-solid fa-share-nodes share__container__icon"></i>
                   <p className="share__container__title">comparte</p>
-                  <i className="fa-solid fa-angle-up share__container__angle"></i>
+                  <i className="fa-solid fa-angle-up share__container__angle collapsible "></i>
                 </div>
                 <div className={`button-container ${classCollapsible.share}`}>
                   <button

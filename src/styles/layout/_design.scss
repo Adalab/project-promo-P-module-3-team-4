@@ -155,3 +155,10 @@
     }
   }
 }
+
+// .design__legend:not(.hidden) .collapsible {
+//   transform: rotate(540deg);
+// }
+.collapsible {
+  transform: rotate(180deg);
+}
