@@ -19,11 +19,7 @@ function App() {
     stuffed: 'hidden',
     share: 'hidden',
   });
-  // const [classArrow, setClassArrow] = useState({
-  //   design: 'turn',
-  //   stuffed: 'turn',
-  //   share: 'turn',
-  // });
+
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
@@ -171,7 +167,7 @@ function App() {
           </article>
 
           <form className="form" action="/signup" method="post">
-            <fieldset className="design">
+            <fieldset className={`design  ${classCollapsible.design}`}>
               <div
                 className="design__legend"
                 title="pincha aqui"
@@ -180,10 +176,10 @@ function App() {
               >
                 <i className="fa-regular fa-object-ungroup icon"></i>
                 <p className="design__titledesign">Diseña</p>
-                <i className="fa-solid fa-angle-up collapsible turn"></i>
+                <i className="fa-solid fa-angle-up collapsible"></i>
               </div>
 
-              <div className={classCollapsible.design}>
+              <div className="subsection">
                 <label htmlFor="palette" className="palette">
                   Colores
                 </label>
@@ -246,7 +242,7 @@ function App() {
               </div>
             </fieldset>
 
-            <fieldset className="filled">
+            <fieldset className={`filled ${classCollapsible.stuffed}`}>
               <div
                 className="filled__legend"
                 title="pincha aqui"
@@ -257,7 +253,7 @@ function App() {
                 <p className="filled__title-filled">rellena</p>
                 <i className="fa-solid fa-angle-up collapsible "></i>
               </div>
-              <section className={`filled-section ${classCollapsible.stuffed}`}>
+              <section className="subsection filled-section">
                 <label className="firstname filled-text" htmlFor="name">
                   Nombre completo
                 </label>
@@ -352,7 +348,7 @@ function App() {
               </section>
             </fieldset>
 
-            <fieldset className="wrapper-share">
+            <fieldset className={`wrapper-share ${classCollapsible.share}`}>
               <div className="share">
                 <div
                   className="share__container"
@@ -364,9 +360,9 @@ function App() {
                   <p className="share__container__title">comparte</p>
                   <i className="fa-solid fa-angle-up share__container__angle collapsible "></i>
                 </div>
-                <div className={`button-container ${classCollapsible.share}`}>
+                <div className="button-container subsection">
                   <button
-                    className="button-container__create "
+                    className="button-container__create"
                     //onClick={handleCreateBtn}
                   >
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
@@ -381,7 +377,7 @@ function App() {
               </div>
 
               <div>
-                <div className={`done ${classCollapsible.share}`}>
+                <div className="done subsection">
                   <p className="done__title">La tarjeta ha sido creada:</p>
                   <a
                     className="done__link"

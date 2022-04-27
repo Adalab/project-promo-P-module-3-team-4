@@ -1,6 +1,20 @@
-.hidden {
-  display: none !important;
-}
-// .turn {
-//   transform: rotate(180deg);
+//.hidden {
+//  display: none !important;
+//}
+.collapsible {
+   transform: rotate(0deg);
+ }
+
+// .design.hidden .subsection {
+//   display: none !important;
 // }
+
+
+.hidden {
+  .subsection {
+    display: none !important;
+  }
+  .collapsible {
+    transform: rotate(180deg);
+  }
+}
