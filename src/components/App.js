@@ -1,7 +1,9 @@
 import '../styles/App.scss';
-import logo from '../images/logo-adalab.png';
-import team from '../images/logo-team.png';
 import { useState } from 'react';
+import Header from "./Header";
+import Footer from "./Footer";
+import Preview from "./Preview";
+import getDataApi from "../services/Api";
 
 function App() {
   const [data, setData] = useState({
@@ -14,6 +16,11 @@ function App() {
     palette: 1,
     photo: '',
   });
+
+  const [dataAPI, setDataAPI] = useState ({
+  
+  });
+
   const [classCollapsible, setClassCollapsible] = useState({
     design: '',
     stuffed: 'hidden',
@@ -89,82 +96,20 @@ function App() {
     }
   };
 
-  //const [btnCreate, setSBtnCreate] = useState('disable');
+  const [btnCreate, setBtnCreate] = useState('disable');
 
-  /*const handleCreateBtn = (ev) => {
+  const handleCreateBtn = (ev) => {
     ev.preventDefault();
-    setSBtnCreate(' ');
-  };*/
+    getDataApi(dataAPI).then(data => 
+      setDataAPI(data));
+  };
+
   return (
     <>
       <div className="createpage">
-        <header className="header">
-          <a className="header__link" href="../index.html" title="ir al inicio">
-            {' '}
-          </a>
-        </header>
-
+        <Header />
         <div className="createwrapper">
-          <article className="preview">
-            <button
-              className="reset "
-              type="reset"
-              title="Reset"
-              onClick={handleReset}
-            >
-              <i className="fa-solid fa-trash-can reset__can"></i>Reset
-            </button>
-
-            <div className={`card palette${data.palette}`}>
-              <div className="card__rectangle rectangle "></div>
-
-              <h2 className="card__names name ">
-                {data.name || 'Nombre Apellido'}
-              </h2>
-              <h3 className="card__profession ">{data.job || 'Profesión'}</h3>
-
-              <div className="card__container-img "></div>
-              <nav className="card__icons icons">
-                <div className="card__icons__container-mobile border ">
-                  <a
-                    title="llamar por teléfono"
-                    href={data.phone}
-                    target="blank"
-                  >
-                    <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile link"></i>
-                  </a>
-                </div>
-
-                <div className="card__icons__container-mail border">
-                  <a
-                    title="enviar email"
-                    href={`mailto:${data.email}`}
-                    target="blank"
-                  >
-                    <i className="fa-solid fa-envelope card__icons__container-mail__mail link"></i>
-                  </a>
-                </div>
-                <div className="card__icons__container-linkedin border">
-                  <a
-                    href={`https://www.linkedin.com/${data.linkedin}`}
-                    target="blank"
-                    title="ir a perfil de Linkedin"
-                  >
-                    <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin link"></i>
-                  </a>
-                </div>
-                <div className="card__icons__container-git border">
-                  <a
-                    href={`https://github.com/${data.github}`}
-                    target="blank"
-                    title="ir a perfil de Github"
-                  >
-                    <i className="fa-brands fa-github-alt card__icons__container-git__github link"></i>
-                  </a>
-                </div>
-              </nav>
-            </div>
-          </article>
+         <Preview reset={handleReset} data={dataAPI}/>
 
           <form className="form" action="/signup" method="post">
             <fieldset className={`design  ${classCollapsible.design}`}>
@@ -363,7 +308,7 @@ function App() {
                 <div className="button-container subsection">
                   <button
                     className="button-container__create"
-                    //onClick={handleCreateBtn}
+                    onClick={handleCreateBtn}
                   >
                     <i className="fa-solid fa-address-card button-container__create__icon"></i>
                     <p
@@ -395,16 +340,7 @@ function App() {
             </fieldset>
           </form>
         </div>
-        <footer>
-          <div className="footer">
-            <img className="footer__img" src={team} alt="" />
-            <h2 className="h2">Awesome profile-cards @2018 Equipo 6</h2>
-
-            <a title="adalab" href="https://www.adalab.es/">
-              <img className="adalab" src={logo} alt="logo adalab" />
-            </a>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </>
   );
