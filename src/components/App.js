@@ -1,9 +1,9 @@
 import '../styles/App.scss';
 import { useState } from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
-import Preview from "./Preview";
-import getDataApi from "../services/Api";
+import Header from './Header';
+import Footer from './Footer';
+import Preview from './Preview';
+import getDataApi from '../services/Api';
 
 function App() {
   const [data, setData] = useState({
@@ -17,9 +17,7 @@ function App() {
     photo: '',
   });
 
-  const [dataAPI, setDataAPI] = useState ({
-  
-  });
+  const [dataAPI, setDataAPI] = useState({});
 
   const [classCollapsible, setClassCollapsible] = useState({
     design: '',
@@ -31,7 +29,6 @@ function App() {
     const inputValue = ev.target.value;
     const inputProp = ev.target.name;
 
-    console.log(inputValue);
     setData({ ...data, [inputProp]: inputValue });
   };
 
@@ -52,7 +49,7 @@ function App() {
 
   const handleCollapsible = (ev) => {
     const idClass = ev.target.id;
-    console.log(idClass);
+    // console.log(idClass);
     const overallCollapsables = {
       stuffed: 'hidden',
       share: 'hidden',
@@ -100,8 +97,10 @@ function App() {
 
   const handleCreateBtn = (ev) => {
     ev.preventDefault();
-    getDataApi(dataAPI).then(data => 
-      setDataAPI(data));
+    getDataApi(dataAPI).then((data) => {
+      console.log(data);
+      setDataAPI(data);
+    });
   };
 
   return (
@@ -109,7 +108,7 @@ function App() {
       <div className="createpage">
         <Header />
         <div className="createwrapper">
-         <Preview reset={handleReset} data={dataAPI}/>
+          <Preview reset={handleReset} data={data} />
 
           <form className="form" action="/signup" method="post">
             <fieldset className={`design  ${classCollapsible.design}`}>
@@ -340,7 +339,7 @@ function App() {
             </fieldset>
           </form>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
