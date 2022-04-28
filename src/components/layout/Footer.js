@@ -1,5 +1,5 @@
-import '../styles/App.scss';
-import logo from '../images/logo-adalab.png';
+import '../../styles/App.scss';
+import logo from '../../images/logo-adalab.png';
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import '../styles/App.scss';
 import team from '../images/logo-awesome-profile-cards.svg';
-import Footer from './Footer';
-import Card from './Card';
+import Footer from './layout/Footer';
+import Card from './card/Card';
 
 function App() {
   return (

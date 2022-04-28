@@ -1,10 +1,10 @@
-import '../styles/App.scss';
+import '../../styles/App.scss';
 import { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 import Preview from './Preview';
-import getDataApi from '../services/Api';
-import Design from './layout/Design';
+import getDataApi from '../../services/Api';
+import Design from '../form/Design';
 
 const Card = () => {
   const [data, setData] = useState({
