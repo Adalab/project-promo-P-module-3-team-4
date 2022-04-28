@@ -333,7 +333,9 @@ function App() {
                   <button
                     className="done__button-twitter"
                     title="publicar la tarjeta en twitter"
-                  ></button>
+                  >
+                    Compartir en Twitter
+                  </button>
                 </div>
               </div>
             </fieldset>
