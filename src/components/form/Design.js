@@ -7,7 +7,7 @@ const Design = (props) => {
     props.collapsible();
   };
   return (
-    <fieldset className={`design  ${props.classCollapsible.design}`}>
+    <fieldset className={`design ${props.classCollapsible.design}`}>
       <div
         className="design__legend"
         title="pincha aqui"
