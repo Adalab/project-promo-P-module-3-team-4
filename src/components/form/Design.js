@@ -1,17 +1,20 @@
 const Design = (props) => {
-  const handleDesing = () => {
+  
+  const handleDesign = () => {
     props.handleInput();
   };
 
-  const handleCollapsible = () => {
-    props.collapsible();
+  const handleHiddenSections = () => {
+    props.handleCollapsible();
   };
+
   return (
+
     <fieldset className={`design ${props.classCollapsible.design}`}>
       <div
         className="design__legend"
         title="pincha aqui"
-        onClick={handleCollapsible}
+        onClick={handleHiddenSections}
         id="design"
       >
         <i className="fa-regular fa-object-ungroup icon"></i>
@@ -30,7 +33,7 @@ const Design = (props) => {
             name="palette"
             value="1"
             checked={props.data.palette === '1'}
-            onChange={handleDesing}
+            onChange={handleDesign}
           />
           <div className="blue1 square"></div>
           <div className="blue1__blue2 square"></div>
@@ -44,7 +47,7 @@ const Design = (props) => {
             name="palette"
             value="2"
             checked={props.data.palette === '2'}
-            onChange={handleDesing}
+            onChange={handleDesign}
           />
           <div className="square red1"></div>
           <div className="square red1__red2"></div>
@@ -58,7 +61,7 @@ const Design = (props) => {
             name="palette"
             value="3"
             checked={props.data.palette === '3'}
-            onChange={handleDesing}
+            onChange={handleDesign}
           />
           <div className="square mix1"></div>
           <div className="square mix1__mix2"></div>
@@ -72,14 +75,15 @@ const Design = (props) => {
             name="palette"
             value="4"
             checked={props.data.palette === '4'}
-            onChange={handleDesing}
+            onChange={handleDesign}
           />
           <div className="square mixteam1"></div>
           <div className="square mixteam1__mixteam2"></div>
           <div className="square mixteam1__mixteam3"></div>
         </div>
       </div>
-    </fieldset>
+          </fieldset>
+    
   );
 };
 

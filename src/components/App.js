@@ -7,6 +7,8 @@ import Footer from './layout/Footer';
 import getDataApi from '../services/Api';
 import Preview from './card/Preview';
 import Design from './form/Design';
+import Stuffed from './form/Stuffed';
+import Share from './form/Share';
 
 function App() {
   const [data, setData] = useState({
@@ -139,165 +141,23 @@ function App() {
         <div className="createwrapper">
           <Preview reset={handleReset} data={data} />
           <form className="form" action="/signup" method="post">
-            <Design
-              data={data}
-              handleInput={handleInput}
-              collapsible={handleCollapsible}
+          <Design 
+          data={data} 
+          handleInput={handleInput} 
+          handleCollapsible={handleCollapsible}
+          classCollapsible={classCollapsible}/>
+            <Stuffed 
+            data={data} 
+            handleInput={handleInput} 
+            handleCollapsible={handleCollapsible}
+            classCollapsible={classCollapsible}
             />
-
-            <fieldset className={`filled ${classCollapsible.stuffed}`}>
-              <div
-                className="filled__legend"
-                title="pincha aqui"
-                onClick={handleCollapsible}
-                id="stuffed"
-              >
-                <i className="fa-regular fa-keyboard icon"></i>
-                <p className="filled__title-filled">rellena</p>
-                <i className="fa-solid fa-angle-up collapsible "></i>
-              </div>
-              <section className="subsection filled-section">
-                <label className="firstname filled-text" htmlFor="name">
-                  Nombre completo
-                </label>
-                <input
-                  className="box-text"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Ej: Sally Jill"
-                  required
-                  value={data.name}
-                  onChange={handleInput}
-                />
-                <label className="job filled-text" htmlFor="job">
-                  Puesto
-                </label>
-                <input
-                  className="box-text"
-                  id="job"
-                  type="text"
-                  name="job"
-                  placeholder="Ej: Front-end unicorn"
-                  required
-                  value={data.job}
-                  onChange={handleInput}
-                />
-                <label className="image filled-text" htmlFor="image">
-                  Imagen de perfil
-                </label>
-
-                <div className="filled-button">
-                  <label htmlFor="image" className="input-orange box-text">
-                    Añadir imagen
-                  </label>
-                  <input id="image" className="hidden-input" />
-
-                  <span className="box-image"></span>
-                </div>
-
-                <label className="emailadress filled-text" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="box-text"
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Ej: sally-hill@gmail.com"
-                  required
-                  value={data.email}
-                  onChange={handleInput}
-                />
-                <label className="phone filled-text" htmlFor="phone">
-                  Teléfono
-                </label>
-                <input
-                  className="box-text"
-                  id="phone"
-                  type="tel"
-                  name="phone"
-                  placeholder="Ej: 555-55-55-55"
-                  required
-                  value={data.phone}
-                  onChange={handleInput}
-                />
-                <label className="linkedin filled-text" htmlFor="linkedin">
-                  Linkedin
-                </label>
-                <input
-                  className="box-text"
-                  id="linkedin"
-                  type="text"
-                  name="linkedin"
-                  placeholder="Ej: linkedin.com/in/sally.hill "
-                  required
-                  value={data.linkedin}
-                  onChange={handleInput}
-                />
-                <label className="github filled-text" htmlFor="github">
-                  Github
-                </label>
-                <input
-                  className="box-text"
-                  id="github"
-                  type="text"
-                  name="github"
-                  placeholder="Ej: @sally-hill"
-                  required
-                  value={data.github}
-                  onChange={handleInput}
-                />
-              </section>
-            </fieldset>
-
-            <fieldset className={`wrapper-share ${classCollapsible.share}`}>
-              <div className="share">
-                <div
-                  className="share__container"
-                  title="pincha aquí"
-                  onClick={handleCollapsible}
-                  id="share"
-                >
-                  <i className="fa-solid fa-share-nodes share__container__icon"></i>
-                  <p className="share__container__title">comparte</p>
-                  <i className="fa-solid fa-angle-up share__container__angle collapsible "></i>
-                </div>
-                <div className="button-container subsection">
-                  <button
-                    className="button-container__create"
-                    onClick={handleCreateBtn}
-                  >
-                    <i className="fa-solid fa-address-card button-container__create__icon"></i>
-                    <p
-                      className="button-container__create__title"
-                      title="crear tarjeta"
-                    >
-                      Crear tarjeta
-                    </p>
-                  </button>
-                </div>
-              </div>
-
-              <div>
-                <div className="done subsection">
-                  <p className="done__title">La tarjeta ha sido creada:</p>
-                  <a
-                    className="done__link"
-                    title="Ir al enlace de la tarjeta"
-                    href="1#"
-                  >
-                    https://link tarjeta creada
-                  </a>
-                  <button
-                    className="done__button-twitter"
-                    title="publicar la tarjeta en twitter"
-                  >
-                    Compartir en Twitter
-                  </button>
-                </div>
-              </div>
-            </fieldset>
+            <Share 
+            data={data} 
+            handleCreateBtn={handleCreateBtn} 
+            handleCollapsible={handleCollapsible}
+            classCollapsible={classCollapsible}
+            />
           </form>
         </div>
         <Footer />
