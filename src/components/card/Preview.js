@@ -1,9 +1,9 @@
 import '../../styles/App.scss';
-// import { useState } from 'react';
 
 const Preview = (props) => {
   const handleReset = (ev) => {
     ev.preventDefault();
+
     const cleanedData = {
       name: '',
       job: '',
@@ -14,7 +14,9 @@ const Preview = (props) => {
       palette: 1,
       photo: '',
     };
-    props.reset(cleanedData);
+    // esto esta a medias 29/04
+    const disableButton = { disable: 'disable' };
+    props.reset(cleanedData, disableButton);
   };
   return (
     <article className="preview">

@@ -21,6 +21,7 @@ function Card() {
   });
 
   const [dataAPI, setDataAPI] = useState({});
+  const [disable, setDisable] = useState('');
 
   const [classCollapsible, setClassCollapsible] = useState({
     design: '',
@@ -28,8 +29,12 @@ function Card() {
     share: 'hidden',
   });
 
-  const handleReset = (cleanedData) => {
+  const handleReset = (cleanedData, disableButton) => {
     setData(cleanedData);
+
+    // esto esta a medias 29/04
+    setDisable(...disableButton);
+    console.log(disableButton);
   };
 
   const handleCollapsible = (id) => {
@@ -112,6 +117,7 @@ function Card() {
               classCollapsible={classCollapsible}
             />
             <Share
+              disable={disable}
               data={data}
               handleCreateBtn={handleCreateBtn}
               handleCollapsible={handleCollapsible}

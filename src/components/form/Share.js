@@ -1,9 +1,5 @@
-import { useState } from 'react';
-
 const Share = (props) => {
-  const [disable, setDisable] = useState('');
   const handleShare = () => {
-    setDisable('disable');
     props.handleCreateBtn();
   };
 
@@ -27,7 +23,7 @@ const Share = (props) => {
         </div>
         <div className="button-container subsection">
           <button
-            className={`button-container__create ${disable}`}
+            className={`button-container__create ${props.disable}`}
             onClick={handleShare}
           >
             <i className="fa-solid fa-address-card button-container__create__icon"></i>
