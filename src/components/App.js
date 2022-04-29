@@ -30,13 +30,6 @@ function App() {
     share: 'hidden',
   });
 
-  const handleInput = (ev) => {
-    const inputValue = ev.target.value;
-    const inputProp = ev.target.name;
-
-    setData({ ...data, [inputProp]: inputValue });
-  };
-
   const handleReset = (ev) => {
     ev.preventDefault();
 
@@ -52,9 +45,9 @@ function App() {
     });
   };
 
-  const handleCollapsible = (ev) => {
-    const idClass = ev.target.id;
-    // console.log(idClass);
+  const handleCollapsible = (id) => {
+    const idClass = id;
+
     const overallCollapsables = {
       stuffed: 'hidden',
       share: 'hidden',
@@ -107,6 +100,10 @@ function App() {
       setDataAPI(data);
     });
   };
+
+  const handleInput = (value, name) => {
+    setData({ ...data, [name]: value });
+  };
   return (
     <>
       {/* <main class="wrapper page">
@@ -141,22 +138,23 @@ function App() {
         <div className="createwrapper">
           <Preview reset={handleReset} data={data} />
           <form className="form" action="/signup" method="post">
-          <Design 
-          data={data} 
-          handleInput={handleInput} 
-          handleCollapsible={handleCollapsible}
-          classCollapsible={classCollapsible}/>
-            <Stuffed 
-            data={data} 
-            handleInput={handleInput} 
-            handleCollapsible={handleCollapsible}
-            classCollapsible={classCollapsible}
+            <Design
+              data={data}
+              handleInput={handleInput}
+              handleCollapsible={handleCollapsible}
+              classCollapsible={classCollapsible}
             />
-            <Share 
-            data={data} 
-            handleCreateBtn={handleCreateBtn} 
-            handleCollapsible={handleCollapsible}
-            classCollapsible={classCollapsible}
+            <Stuffed
+              data={data}
+              handleInput={handleInput}
+              handleCollapsible={handleCollapsible}
+              classCollapsible={classCollapsible}
+            />
+            <Share
+              data={data}
+              handleCreateBtn={handleCreateBtn}
+              handleCollapsible={handleCollapsible}
+              classCollapsible={classCollapsible}
             />
           </form>
         </div>

@@ -1,15 +1,15 @@
 const Design = (props) => {
-  
-  const handleDesign = () => {
-    props.handleInput();
+  const handleDesign = (ev) => {
+    const value = ev.target.value;
+    const name = ev.target.name;
+    return props.handleInput(value, name);
   };
 
-  const handleHiddenSections = () => {
-    props.handleCollapsible();
+  const handleHiddenSections = (ev) => {
+    const id = ev.target.id;
+    props.handleCollapsible(id);
   };
-
   return (
-
     <fieldset className={`design ${props.classCollapsible.design}`}>
       <div
         className="design__legend"
@@ -82,8 +82,7 @@ const Design = (props) => {
           <div className="square mixteam1__mixteam3"></div>
         </div>
       </div>
-          </fieldset>
-    
+    </fieldset>
   );
 };
 
