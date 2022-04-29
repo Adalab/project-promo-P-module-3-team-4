@@ -1,6 +1,8 @@
 const Stuffed = (props) => {
-  const handleStuffed = () => {
-    props.handleInput();
+  const handleStuffed = (ev) => {
+    const value = ev.target.value;
+    const name = ev.target.name;
+    props.handleInput(value, name);
   };
   const handleHiddenSections = (ev) => {
     const id = ev.target.id;

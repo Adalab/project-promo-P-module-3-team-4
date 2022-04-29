@@ -103,6 +103,7 @@ function App() {
 
   const handleInput = (value, name) => {
     setData({ ...data, [name]: value });
+    console.log(data);
   };
   return (
     <>

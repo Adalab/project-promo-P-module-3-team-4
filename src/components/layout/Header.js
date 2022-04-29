@@ -1,5 +1,4 @@
 import '../../styles/App.scss';
-// import { useState } from 'react';
 
 const Header = () => {
   return (
