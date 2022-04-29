@@ -74,7 +74,7 @@ const Design = (props) => {
             type="radio"
             name="palette"
             value="4"
-            checked={props.data.palette === '4'}
+            checked={props.data.palette === '4' || false}
             onChange={handleDesign}
           />
           <div className="square mixteam1"></div>

@@ -1,13 +1,11 @@
+import { Link } from 'react-router-dom';
 import '../../styles/App.scss';
+
 const Header = () => {
   return (
     <>
       <header className="header">
-        <a
-          className="header__link"
-          href="../index.html"
-          title="ir al inicio"
-        ></a>
+        <Link className="header__link" to="/" title="ir al inicio"></Link>
       </header>
     </>
   );

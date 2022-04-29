@@ -1,14 +1,12 @@
 import team from '../../images/logo-awesome-profile-cards.svg';
 
-import { Link, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../styles/App.scss';
 import Footer from '../layout/Footer';
 
 const Landing = () => {
   return (
     <>
-      <Routes></Routes>
-
       <main className="wrapper page">
         <section className="landing">
           <img

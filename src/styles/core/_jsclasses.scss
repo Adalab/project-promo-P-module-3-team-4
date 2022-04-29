@@ -1,14 +1,6 @@
-//.hidden {
-//  display: none !important;
-//}
 .collapsible {
-   transform: rotate(0deg);
- }
-
-// .design.hidden .subsection {
-//   display: none !important;
-// }
-
+  transform: rotate(0deg);
+}
 
 .hidden {
   .subsection {
@@ -17,4 +9,8 @@
   .collapsible {
     transform: rotate(180deg);
   }
+}
+
+.disable {
+  background-color: $light-grey-blue !important;
 }

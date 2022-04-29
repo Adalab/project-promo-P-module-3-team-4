@@ -1,10 +1,15 @@
+import { useState } from 'react';
+
 const Share = (props) => {
+  const [disable, setDisable] = useState('');
   const handleShare = () => {
+    setDisable('disable');
     props.handleCreateBtn();
   };
 
   const handleHiddenSections = (ev) => {
     const id = ev.target.id;
+
     props.handleCollapsible(id);
   };
   return (
@@ -21,7 +26,10 @@ const Share = (props) => {
           <i className="fa-solid fa-angle-up share__container__angle collapsible "></i>
         </div>
         <div className="button-container subsection">
-          <button className="button-container__create" onClick={handleShare}>
+          <button
+            className={`button-container__create ${disable}`}
+            onClick={handleShare}
+          >
             <i className="fa-solid fa-address-card button-container__create__icon"></i>
             <p
               className="button-container__create__title"
