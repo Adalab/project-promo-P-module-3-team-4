@@ -29,12 +29,8 @@ function Card() {
     share: 'hidden',
   });
 
-  const handleReset = (cleanedData, disableButton) => {
+  const handleReset = (cleanedData) => {
     setData(cleanedData);
-
-    // esto esta a medias 29/04
-    setDisable(...disableButton);
-    console.log(disableButton);
   };
 
   const handleCollapsible = (id) => {
@@ -86,7 +82,9 @@ function Card() {
   // const [btnCreate, setBtnCreate] = useState('disable');
 
   const handleCreateBtn = (ev) => {
-    ev.preventDefault();
+    // Se ejecutaba en esta funcion
+    setDisable('disable');
+
     getDataApi(dataAPI).then((data) => {
       console.log(data);
       setDataAPI(data);

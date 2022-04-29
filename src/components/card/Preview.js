@@ -15,8 +15,8 @@ const Preview = (props) => {
       photo: '',
     };
     // esto esta a medias 29/04
-    const disableButton = { disable: 'disable' };
-    props.reset(cleanedData, disableButton);
+
+    props.reset(cleanedData);
   };
   return (
     <article className="preview">
