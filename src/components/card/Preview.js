@@ -2,13 +2,27 @@ import '../../styles/App.scss';
 // import { useState } from 'react';
 
 const Preview = (props) => {
+  const handleReset = (ev) => {
+    ev.preventDefault();
+    const cleanedData = {
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      palette: 1,
+      photo: '',
+    };
+    props.reset(cleanedData);
+  };
   return (
     <article className="preview">
       <button
         className="reset "
         type="reset"
         title="Reset"
-        onClick={props.reset}
+        onClick={handleReset}
       >
         <i className="fa-solid fa-trash-can reset__can"></i>Reset
       </button>
