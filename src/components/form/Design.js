@@ -9,6 +9,7 @@ const Design = (props) => {
     const id = ev.target.id;
     props.handleCollapsible(id);
   };
+
   return (
     <fieldset className={`design ${props.classCollapsible.design}`}>
       <div

@@ -11,7 +11,7 @@ const Preview = (props) => {
       phone: '',
       linkedin: '',
       github: '',
-      palette: 1,
+      palette: '1',
       photo: '',
     };
     // esto esta a medias 29/04

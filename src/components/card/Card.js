@@ -16,7 +16,7 @@ function Card() {
     phone: '',
     linkedin: '',
     github: '',
-    palette: 1,
+    palette: '1',
     photo: '',
   });
 
