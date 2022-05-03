@@ -17,12 +17,12 @@ function Card() {
     linkedin: '',
     github: '',
     palette: '1',
-    photo: '',
+    photo:
+      'https://www.zooplus.es/magazine/wp-content/uploads/2019/07/border-collie-.jpeg',
   });
 
   const [dataAPI, setDataAPI] = useState({});
   const [disable, setDisable] = useState('');
-
   const [classCollapsible, setClassCollapsible] = useState({
     design: '',
     stuffed: 'hidden',
@@ -79,15 +79,12 @@ function Card() {
     }
   };
 
-  // const [btnCreate, setBtnCreate] = useState('disable');
-
-  const handleCreateBtn = (ev) => {
+  const handleCreateCard = (ev) => {
     // Se ejecutaba en esta funcion
     setDisable('disable');
-
-    getDataApi(dataAPI).then((data) => {
-      console.log(data);
-      setDataAPI(data);
+    // Que se quite el hidden de la seccion tarjeta creada
+    getDataApi(data).then((response) => {
+      setDataAPI(response);
     });
   };
 
@@ -117,9 +114,15 @@ function Card() {
             <Share
               disable={disable}
               data={data}
-              handleCreateBtn={handleCreateBtn}
+              handleCreateBtn={handleCreateCard}
               handleCollapsible={handleCollapsible}
               classCollapsible={classCollapsible}
+              dataApi={dataAPI}
+              message={
+                dataAPI.success === true
+                  ? `La tarjeta ha sido creada : `
+                  : `Falta algún dato`
+              }
             />
           </form>
         </div>

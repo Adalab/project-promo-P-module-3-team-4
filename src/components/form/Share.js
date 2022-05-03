@@ -1,5 +1,6 @@
 const Share = (props) => {
-  const handleShare = () => {
+  const handleShare = (event) => {
+    event.preventDefault();
     props.handleCreateBtn();
   };
 
@@ -39,13 +40,13 @@ const Share = (props) => {
 
       <div>
         <div className="done subsection">
-          <p className="done__title">La tarjeta ha sido creada:</p>
+          <p className="done__title">{props.message}</p>
           <a
             className="done__link"
             title="Ir al enlace de la tarjeta"
-            href="1#"
+            href={props.dataApi.cardURL}
           >
-            https://link tarjeta creada
+            {props.dataApi.cardURL}
           </a>
           <button
             className="done__button-twitter"
