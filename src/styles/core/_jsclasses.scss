@@ -1,6 +1,16 @@
-.hidden {
-  display: none !important;
+.collapsible {
+  transform: rotate(0deg);
 }
-// .turn {
-//   transform: rotate(180deg);
-// }
+
+.hidden {
+  .subsection {
+    display: none !important;
+  }
+  .collapsible {
+    transform: rotate(180deg);
+  }
+}
+
+.disable {
+  background-color: $light-grey-blue !important;
+}

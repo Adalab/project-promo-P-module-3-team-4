@@ -69,6 +69,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 5px;
   border-bottom: 1px solid $contentmedium;
@@ -84,6 +85,7 @@
     color: $brandlight;
     font-size: 12px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   &__button-twitter {
@@ -98,17 +100,14 @@
     align-items: center;
     margin-bottom: 30px;
     cursor: pointer;
+    color: $contentwhite;
+    font-size: 14px;
+    text-decoration: none;
 
     &__icon {
       color: $contentwhite;
       font-size: 14px;
       margin-right: 9.5px;
-    }
-
-    &__content {
-      color: $contentwhite;
-      font-size: 14px;
-      text-decoration: none;
     }
   }
 }
