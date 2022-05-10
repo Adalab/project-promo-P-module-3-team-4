@@ -1,5 +1,4 @@
 import ImageReader from '../../services/ImageReader';
-import { useRef } from 'react';
 const Stuffed = (props) => {
   const handleStuffed = (ev) => {
     const value = ev.target.value;
