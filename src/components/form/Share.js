@@ -51,6 +51,7 @@ const Share = (props) => {
           <button
             className="done__button-twitter"
             title="publicar la tarjeta en twitter"
+            onClick={props.shareOnTwitter}
           >
             Compartir en Twitter
           </button>

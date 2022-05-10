@@ -94,6 +94,14 @@ function Card() {
   const handleImage = (photo) => {
     setData({ ...data, photo });
   };
+
+  // Función twitter
+  function shareOnTwitter(event) {
+    event.preventDefault();
+    console.log(dataAPI.cardURL);
+    let url = `https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20profesional.%20Conóceme!%20&url=${dataAPI.cardURL}`;
+    window.location.href = url;
+  }
   return (
     <>
       <div className="createpage">
@@ -121,6 +129,7 @@ function Card() {
               handleCreateBtn={handleCreateCard}
               handleCollapsible={handleCollapsible}
               classCollapsible={classCollapsible}
+              shareOnTwitter={shareOnTwitter}
               dataApi={dataAPI}
               message={
                 dataAPI.success === true
