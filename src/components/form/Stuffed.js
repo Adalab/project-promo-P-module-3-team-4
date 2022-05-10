@@ -3,7 +3,6 @@ import { useRef } from 'react';
 const Stuffed = (props) => {
   // Creamos una referencia a una etiqueta HTML y la llamamos inputEl
   const inputEl = useRef();
-  console.log(inputEl);
   const handleButton = () => {
     // current apunta a la etiqueta input
     inputEl.current.focus();
@@ -61,16 +60,7 @@ const Stuffed = (props) => {
         <label className="image filled-text" htmlFor="image">
           Imagen de perfil
         </label>
-
-        <div className="filled-button">
-          <label htmlFor="image" className="input-orange box-text">
-            Añadir imagen
-          </label>
-          <input id="image" className="hidden-input" onClick={handleButton} />
-
-          <span className="box-image"></span>
-        </div>
-
+        <ImageReader photo={props.photo} handleImage={props.handleImage} />
         <label className="emailadress filled-text" htmlFor="email">
           Email
         </label>

@@ -1,5 +1,5 @@
 import '../../styles/App.scss';
-
+import Avatar from '../../images/cat.jpg';
 const Preview = (props) => {
   const handleReset = (ev) => {
     ev.preventDefault();
@@ -12,12 +12,13 @@ const Preview = (props) => {
       linkedin: '',
       github: '',
       palette: '1',
-      photo: '',
+      photo: Avatar,
     };
-    // esto esta a medias 29/04
 
     props.reset(cleanedData);
+    console.log(cleanedData);
   };
+
   return (
     <article className="preview">
       <button
@@ -37,7 +38,10 @@ const Preview = (props) => {
         </h2>
         <h3 className="card__profession ">{props.data.job || 'Profesión'}</h3>
 
-        <div className="card__container-img "></div>
+        <div
+          className="card__container-img "
+          style={{ backgroundImage: `url(${props.data.photo})` }}
+        ></div>
         <nav className="card__icons icons">
           <div className="card__icons__container-mobile border ">
             <a

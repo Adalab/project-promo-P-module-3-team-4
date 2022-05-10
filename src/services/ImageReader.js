@@ -1,6 +1,6 @@
 // Fichero src/components/ImageReader.js
 import { useRef, useState } from 'react';
-
+import Avatar from '../images/cat.jpg';
 /*
 El orden cronológico en el que se ejecuta este componente es:
 - Se renderiza la primera vez
@@ -54,18 +54,21 @@ const ImageReader = (props) => {
   const getImage = () => {
     // Cuando la imagen ya esté lista en fileReader.result tendremos su contenido
     // Hacemos lifting de este contenido hacia arriba
-    props.handleImage(fileReader.result);
+
+    const photo = fileReader.result;
+    props.handleImage(photo);
   };
 
   // Escuchamos el evento load de fileReader y cuando se lance lo manejamos con la función getImage
   fileReader.addEventListener('load', getImage);
-
+  const photo = props.photo === '' ? Avatar : props.photo;
   return (
-    <div>
-      <label>
-        Selecciona una imagen por favor:
-        {/* Usamos fileElement como referencia de este input */}
+    <div className="filled-button">
+      <label htmlFor="image" className="input-orange box-text">
+        Añadir imagen
         <input
+          id="image"
+          className="hidden-input"
           ref={fileElement}
           type="file"
           name="image-reader"
@@ -73,8 +76,10 @@ const ImageReader = (props) => {
         />
       </label>
 
-      <p>El tamaño de la imagen es: {fileSize} bytes.</p>
-      <p>El tipo de la imagen es: {fileType}.</p>
+      <span
+        className="box-image"
+        style={{ backgroundImage: `url(${photo})` }}
+      ></span>
     </div>
   );
 };

@@ -7,7 +7,7 @@ import Preview from '../card/Preview';
 import Design from '../form/Design';
 import Stuffed from '../form/Stuffed';
 import Share from '../form/Share';
-
+import Avatar from '../../images/cat.jpg';
 function Card() {
   const [data, setData] = useState({
     name: '',
@@ -17,8 +17,7 @@ function Card() {
     linkedin: '',
     github: '',
     palette: '1',
-    photo:
-      'https://www.zooplus.es/magazine/wp-content/uploads/2019/07/border-collie-.jpeg',
+    photo: Avatar,
   });
 
   const [dataAPI, setDataAPI] = useState({});
@@ -92,6 +91,10 @@ function Card() {
     setData({ ...data, [name]: value });
     console.log(data);
   };
+
+  const handleImage = (photo) => {
+    setData({ ...data, photo });
+  };
   return (
     <>
       <div className="createpage">
@@ -110,6 +113,8 @@ function Card() {
               handleInput={handleInput}
               handleCollapsible={handleCollapsible}
               classCollapsible={classCollapsible}
+              photo={data.photo}
+              handleImage={handleImage}
             />
             <Share
               disable={disable}
