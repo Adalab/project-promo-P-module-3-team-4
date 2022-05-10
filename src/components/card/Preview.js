@@ -42,7 +42,7 @@ const Preview = (props) => {
           style={{ backgroundImage: `url(${props.data.photo})` }}
         ></div>
         <nav className="card__icons icons">
-          <div className="card__icons__container-mobile border ">
+          <div className="card__icons__container border ">
             <a
               title="llamar por teléfono"
               href={props.data.phone}
@@ -52,7 +52,7 @@ const Preview = (props) => {
             </a>
           </div>
 
-          <div className="card__icons__container-mail border">
+          <div className="card__icons__container border">
             <a
               title="enviar email"
               href={`mailto:${props.data.email}`}
@@ -61,7 +61,7 @@ const Preview = (props) => {
               <i className="fa-solid fa-envelope card__icons__container-mail__mail link"></i>
             </a>
           </div>
-          <div className="card__icons__container-linkedin border">
+          <div className="card__icons__container border">
             <a
               href={`https://www.linkedin.com/${props.data.linkedin}`}
               target="blank"
@@ -70,7 +70,7 @@ const Preview = (props) => {
               <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin link"></i>
             </a>
           </div>
-          <div className="card__icons__container-git border">
+          <div className="card__icons__container border">
             <a
               href={`https://github.com/${props.data.github}`}
               target="blank"
