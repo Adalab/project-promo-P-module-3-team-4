@@ -48,7 +48,7 @@ const Preview = (props) => {
               href={props.data.phone}
               target="blank"
             >
-              <i className="fa-solid fa-mobile-screen-button class card__icons__container-mobile__mobile link"></i>
+              <i className="fa-solid fa-mobile-screen-button link"></i>
             </a>
           </div>
 
@@ -58,7 +58,7 @@ const Preview = (props) => {
               href={`mailto:${props.data.email}`}
               target="blank"
             >
-              <i className="fa-solid fa-envelope card__icons__container-mail__mail link"></i>
+              <i className="fa-solid fa-envelope  link"></i>
             </a>
           </div>
           <div className="card__icons__container border">
@@ -67,7 +67,7 @@ const Preview = (props) => {
               target="blank"
               title="ir a perfil de Linkedin"
             >
-              <i className="fa-brands fa-linkedin-in card__icons__container-linkedin__linkedin link"></i>
+              <i className="fa-brands fa-linkedin-in  link"></i>
             </a>
           </div>
           <div className="card__icons__container border">
@@ -76,7 +76,7 @@ const Preview = (props) => {
               target="blank"
               title="ir a perfil de Github"
             >
-              <i className="fa-brands fa-github-alt card__icons__container-git__github link"></i>
+              <i className="fa-brands fa-github-alt link"></i>
             </a>
           </div>
         </nav>
