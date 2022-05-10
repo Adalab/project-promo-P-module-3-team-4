@@ -89,7 +89,6 @@ function Card() {
 
   const handleInput = (value, name) => {
     setData({ ...data, [name]: value });
-    console.log(data);
   };
 
   const handleImage = (photo) => {

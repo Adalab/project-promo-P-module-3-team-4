@@ -16,7 +16,6 @@ const Preview = (props) => {
     };
 
     props.reset(cleanedData);
-    console.log(cleanedData);
   };
 
   return (

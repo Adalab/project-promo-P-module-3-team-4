@@ -1,14 +1,6 @@
 import ImageReader from '../../services/ImageReader';
 import { useRef } from 'react';
 const Stuffed = (props) => {
-  // Creamos una referencia a una etiqueta HTML y la llamamos inputEl
-  const inputEl = useRef();
-  const handleButton = () => {
-    // current apunta a la etiqueta input
-    inputEl.current.focus();
-    console.log('cick');
-  };
-
   const handleStuffed = (ev) => {
     const value = ev.target.value;
     const name = ev.target.name;
